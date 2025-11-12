@@ -37,7 +37,7 @@
   }
 
   .image-container22 {
-    width: 50vw;
+    /* width: 50vw; */
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -580,7 +580,7 @@
   background: #fff;
   padding: 25px 20px;
   border-radius: 15px;
-  height: 15vh;
+  height: 130px;
   transition: .7s;
   outline: 1px solid #ffB000;
 }
