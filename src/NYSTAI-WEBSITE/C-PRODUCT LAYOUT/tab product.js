@@ -90,7 +90,7 @@ export default function Tabsliderpro() {
             </div>
             <div>
               <div className="controls mb-1">
-                <label htmlFor="banner1">
+                {/* <label htmlFor="banner1">
                   <span className="progressbar">
                     <span className="progressbar-fill"></span>
                   </span>
@@ -203,8 +203,7 @@ export default function Tabsliderpro() {
                     </a>
                   </p>
                   <p class="h6 fw-bold">Nystai Solution</p>
-                </label>
-
+                </label> */}
                 <div className="line-tab-solu"></div>
               </div>
             </div>

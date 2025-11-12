@@ -71,6 +71,7 @@ export default function Rightleft() {
     }
   };
 
+
   return (
     <>
       <section className="testi-moni-nystai mt-5">
@@ -80,10 +81,11 @@ export default function Rightleft() {
               <div ref={lineRef}></div>
               <div className="image-container22">
                 <AsyncImage
-                  src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/1-Unified-Platform.jpg"
+                  src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/1 Unified Platform.webp"
                   alt="nys-image"
                   className="image"
                   ref={addToRefs}
+                  style={{ borderRadius: "10px" }}
                 />
               </div>
               <div ref={box02Ref}></div>
