@@ -80,8 +80,16 @@ export default function WORSHIP() {
   const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = document.querySelector('.sub-nav-edu-solu')?.offsetHeight || 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
+      setOpen(false);
     }
   };
 
@@ -165,119 +173,47 @@ export default function WORSHIP() {
       {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div
-            className=""
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "20px 10px 10px 10px",
-              borderRadius: "10px 10px 0 0",
-            }}
-          >
-            <h4 style={{ color: "#FFB000", fontWeight: "bold" }}>
-              <span style={{ color: "#8c8c8c" }}>INTEGRATED</span> SOLUTIONS
-            </h4>
-          </div>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
-            <Link to="/nystai-solution-home">
-              <p style={{ color: "#FFB000" }}>
+            <a onClick={() => handleScrollToSection("Overview")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
-                  icon={faHouseSignal}
+                  icon={faHome}
                   className="me-3"
                 />
-                SMARTHOME
+                Overview
               </p>
-            </Link>
-            <Link to="/nystai-solution-Industrial">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                INDUSTRIAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-education">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faSchool}
-                  className="me-3"
-                />
-                EDUCATION
-              </p>
-            </Link>
-            <Link to="/nystai-solution-worship">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faPlaceOfWorship}
-                  className="me-3"
-                />
-                WORSHIP
-              </p>
-            </Link>
-            <Link to="/nystai-solution-vms">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCarBurst}
-                  className="me-3"
-                />
-                VMS
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Warehouse">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faWarehouse}
-                  className="me-3"
-                />
-                WAREHOUSE
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Hospital">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                HOSPITAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-banking">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faBuildingColumns}
-                  className="me-3"
-                />
-                BANKING
-              </p>
-            </Link>
-            <Link to="/nystai-solution-retail">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCircleInfo}
-                  className="me-3"
-                />
-                RETAIL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-parking">
-              <p style={{ color: "#FFB000" }}>
+            </a>
+            <a onClick={() => handleScrollToSection("What we offer")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
-                PARKING IOT SOLUTION
+                What we offer
               </p>
-            </Link>
+            </a>
+            <a onClick={() => handleScrollToSection("Features")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faCircleInfo}
+                  className="me-3"
+                />
+                Features
+              </p>
+            </a>
+            <a onClick={() => handleScrollToSection("Product display")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faWarehouse}
+                  className="me-3"
+                />
+                Product display
+              </p>
+            </a>
           </div>
         </Drawer>
       </Container>
@@ -285,7 +221,7 @@ export default function WORSHIP() {
       <section id="main-content" className="page-sections">
         <section className="container page-section mt-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
-            <h3 className="heading-34">Nystai’s Worship Solution</h3>
+            <h3 className="heading-34">Nystai's Worship Solution</h3>
             <p className="text-block-60">
               NYSTAI transforms places of worship into modern, secure, and
               efficient spaces. With advanced surveillance systems, energy
@@ -296,36 +232,6 @@ export default function WORSHIP() {
               and connected worship experience for all.
             </p>
           </div>
-
-          {/* <div class="card-deck row" >
-                        <div class="card col-lg-3">
-                            <center>
-                                <AsyncImage className="card-img-top" src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/worshipicon1 (2).webp"} alt="Card image cap" style={{ height: "85px", maxWidth: "100%", width: "auto" }} />
-                            </center>
-                            <div class="card-body">
-                                <h4 class="card-title " style={{ textTransform: "uppercase", fontWeight: "bolder", color: "#FFB000" }}>Safety</h4>
-                                <p class="card-text" style={{ color: "#8c8c8c" }}>Advanced surveillance and access control systems ensure a secure environment for worshippers. </p>
-                            </div>
-                        </div>
-                        <div class="card col-lg-3">
-                            <center>
-                                <AsyncImage className="card-img-top" src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT//worshipicon1 (3).webp"} alt="Card image cap" style={{ height: "85px", maxWidth: "100%", width: "auto" }} />
-                            </center>
-                            <div class="card-body">
-                                <h4 class="card-title " style={{ textTransform: "uppercase", fontWeight: "bolder", color: "#FFB000" }}>Efficiency</h4>
-                                <p class="card-text" style={{ color: "#8c8c8c" }}>Smart energy and crowd management solutions streamline day-to-day operations. </p>
-                            </div>
-                        </div>
-                        <div class="card col-lg-3">
-                            <center>
-                                <AsyncImage className="card-img-top" src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT//worshipicon1 (1).webp"} alt="Card image cap" style={{ height: "85px", maxWidth: "100%", width: "auto" }} />
-                            </center>
-                            <div class="card-body">
-                                <h4 class="card-title " style={{ textTransform: "uppercase", fontWeight: "bolder", color: "#FFB000" }}>Connectivity</h4>
-                                <p class="card-text" style={{ color: "#8c8c8c" }}>Digital tools enhance communication, organization, and engagement with the congregation. </p>
-                            </div>
-                        </div>
-                    </div> */}
 
           <div className="card-wrapper card-deck-custom row mt-5">
             <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
@@ -400,9 +306,9 @@ export default function WORSHIP() {
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Efficiency</h4>
+                  <h4 className="card-title">Sanctity</h4>
                   <p className="card-text">
-                    Smart energy and crowd management solutions.
+                    Designed to preserve
                   </p>
                 </div>
               </div>
@@ -487,15 +393,6 @@ export default function WORSHIP() {
                 </div>
               </div>
             </div>
-            {/* <div class="col">
-                            <div class="card" style={{ border: "none", outline: "none" }}>
-                                <AsyncImage src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Worship images/2.webp"} className="" alt="..." />
-                                <div class="card-body" style={{ padding: "0" }}>
-                                    <h2 class="card-title" style={{ textTransform: "uppercase", fontWeight: "bolder", color: "#FFB000" }}></h2>
-                                    <p class="card-text" style={{ color: "#8c8c8c" }}>Innovative technologies can address these challenges effectively. Advanced surveillance systems enhance security, while smart lighting and climate control solutions reduce energy wastage. Digital platforms simplify operations by streamlining donations, volunteer management, and event planning. Together, these tools create a safe, efficient, and harmonious environment for worshippers and administrators to focus on their spiritual goals. </p>
-                                </div>
-                            </div>
-                        </div> */}
           </div>
 
           <div

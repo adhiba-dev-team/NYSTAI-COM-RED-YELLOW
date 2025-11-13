@@ -656,7 +656,7 @@ const HeadingForm = () => {
           <div
             className={`card custom-card ${activeForm === "Sales" ? "active" : ""}`}
             onClick={() => setActiveForm("Sales")}
-            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(1).png')` }}
+            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(1).png')` , height:"100px"}}
           >
             <div className="card-body">
               {/* <h4 className="card-title mb-0">SALES</h4> */}
@@ -669,7 +669,7 @@ const HeadingForm = () => {
           <div
             className={`card custom-card ${activeForm === "Support" ? "active" : ""}`}
             onClick={() => setActiveForm("Support")}
-            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(2).png')` }}
+            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(2).png')` , height:"100px"}}
           >
             <div className="card-body">
               {/* <h4 className="card-title mb-0">SUPPORT</h4> */}
@@ -682,7 +682,7 @@ const HeadingForm = () => {
           <div
             className={`card custom-card ${activeForm === "Partner" ? "active" : ""}`}
             onClick={() => setActiveForm("Partner")}
-            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(3).png')` }}
+            style={{ backgroundImage: `url('/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/support-cards(3).png')` , height:"100px"}}
           >
             <div className="card-body">
               {/* <h4 className="card-title mb-0">PARTNER</h4> */}

@@ -347,7 +347,7 @@ export default function Parkinglot() {
         <section className="container page-section mt-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
             <h3 className="heading-34">
-              NYSTAI’S TRAFFIC MANAGEMENT INTEGRATED AI PARKING 
+              NYSTAI’S TRAFFIC MANAGEMENT INTEGRATED AI PARKING
             </h3>
             <p className="text-block-60">
               Nystai’s Traffic Management Intelligent AI Parking Solutions
@@ -396,7 +396,7 @@ export default function Parkinglot() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parking1 (1).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parkiot-images/park-four-card-1.png"
                     }
                     alt="Card image cap"
                   />
@@ -405,6 +405,9 @@ export default function Parkinglot() {
                   <h4 className="card-title">
                     Efficient vehicle tracking system{" "}
                   </h4>
+                   <p className="card-text">
+                    Enhancing shopper interaction with smart, personalized retail experiences
+                  </p>
                 </div>
               </div>
             </div>
@@ -415,7 +418,7 @@ export default function Parkinglot() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parking1 (2).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parkiot-images/park-four-card-2.png"
                     }
                     alt="Card image cap"
                   />
@@ -424,6 +427,9 @@ export default function Parkinglot() {
                   <h4 className="card-title">
                     Automated parking space management{" "}
                   </h4>
+                  <p className="card-text">
+                    Enhancing shopper interaction with smart, personalized retail experiences
+                  </p>
                 </div>
               </div>
             </div>
@@ -434,7 +440,7 @@ export default function Parkinglot() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parking1 (3).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parkiot-images/park-four-card-3.png"
                     }
                     alt="Card image cap"
                   />
@@ -443,6 +449,9 @@ export default function Parkinglot() {
                   <h4 className="card-title">
                     Real-time traffic congestion control{" "}
                   </h4>
+                  <p className="card-text">
+                    Enhancing shopper interaction with smart, personalized retail experiences
+                  </p>
                 </div>
               </div>
             </div>
@@ -453,15 +462,18 @@ export default function Parkinglot() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parking1 (3).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/parkiot-images/park-four-card-4.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Real-time traffic congestion control{" "}
+                    Guides drivers with accurate{" "}
                   </h4>
+                  <p className="card-text">
+                    Guides drivers with accurate
+                  </p>
                 </div>
               </div>
             </div>
@@ -497,7 +509,7 @@ export default function Parkinglot() {
                   integrated camera-light systems, streamline traffic flow and
                   automate parking management. They accurately detect vehicles,
                   manage available spaces, and reduce congestion for a smoother,
-                  safer experience. 
+                  safer experience.
                 </p>
               </div>
             </div>

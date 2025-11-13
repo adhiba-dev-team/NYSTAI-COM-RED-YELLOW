@@ -83,10 +83,19 @@ export default function Hospital() {
   const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = document.querySelector('.sub-nav-edu-solu')?.offsetHeight || 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
+      setOpen(false);
     }
   };
+
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -168,126 +177,54 @@ export default function Hospital() {
       {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div
-            className=""
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "20px 10px 10px 10px",
-              borderRadius: "10px 10px 0 0",
-            }}
-          >
-            <h4 style={{ color: "#FFB000", fontWeight: "bold" }}>
-              <span style={{ color: "#8c8c8c" }}>INTEGRATED</span> SOLUTIONS
-            </h4>
-          </div>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
-            <Link to="/nystai-solution-home">
-              <p style={{ color: "#FFB000" }}>
+            <a onClick={() => handleScrollToSection("Overview")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
-                  icon={faHouseSignal}
+                  icon={faHome}
                   className="me-3"
                 />
-                SMARTHOME
+                Overview
               </p>
-            </Link>
-            <Link to="/nystai-solution-Industrial">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                INDUSTRIAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-education">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faSchool}
-                  className="me-3"
-                />
-                EDUCATION
-              </p>
-            </Link>
-            <Link to="/nystai-solution-worship">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faPlaceOfWorship}
-                  className="me-3"
-                />
-                WORSHIP
-              </p>
-            </Link>
-            <Link to="/nystai-solution-vms">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCarBurst}
-                  className="me-3"
-                />
-                VMS
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Warehouse">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faWarehouse}
-                  className="me-3"
-                />
-                WAREHOUSE
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Hospital">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                HOSPITAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-banking">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faBuildingColumns}
-                  className="me-3"
-                />
-                BANKING
-              </p>
-            </Link>
-            <Link to="/nystai-solution-retail">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCircleInfo}
-                  className="me-3"
-                />
-                RETAIL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-parking">
-              <p style={{ color: "#FFB000" }}>
+            </a>
+            <a onClick={() => handleScrollToSection("What we offer")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
-                PARKING IOT SOLUTION
+                What we offer
               </p>
-            </Link>
+            </a>
+            <a onClick={() => handleScrollToSection("Features")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faCircleInfo}
+                  className="me-3"
+                />
+                Features
+              </p>
+            </a>
+            <a onClick={() => handleScrollToSection("Product display")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faWarehouse}
+                  className="me-3"
+                />
+                Product display
+              </p>
+            </a>
           </div>
         </Drawer>
       </Container>
       <section id="main-content" className="page-sections">
         <section className="container page-section mt-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
-            <h3 className="heading-34">NYSTAI’S HOSPITAL SOLUTION</h3>
+            <h3 className="heading-34">NYSTAI'S HOSPITAL SOLUTION</h3>
             <p className="text-block-60">
               The NYSTAI product offers cutting-edge healthcare solutions to
               address the technological challenges faced by hospitals. With
@@ -311,13 +248,16 @@ export default function Hospital() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-icon (1).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-images/hosp-four-card-img-1.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Seamless Communication </h4>
+                  <h4 className="card-title">Real-Time Monitoring</h4>
+                  <p className="card-text">
+                    Customizable for Any Environment{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -328,13 +268,16 @@ export default function Hospital() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-icon (3).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-images/hosp-four-card-img-2.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Seamless Communication </h4>
+                  <h4 className="card-title">AI Diagnosis</h4>
+                  <p className="card-text">
+                    Customizable for Any Environment{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -345,13 +288,16 @@ export default function Hospital() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-icon (2).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-images/hosp-four-card-img-3.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Seamless Communication </h4>
+                  <h4 className="card-title">Seamless Communication</h4>
+                  <p className="card-text">
+                    Customizable for Any Environment{" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -362,13 +308,16 @@ export default function Hospital() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-icon (2).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-images/hosp-four-card-img-4.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Seamless Communication </h4>
+                  <h4 className="card-title">Smart Patient Management</h4>
+                  <p className="card-text">
+                    Automates patient flow for faster care {" "}
+                  </p>
                 </div>
               </div>
             </div>
@@ -474,7 +423,7 @@ export default function Hospital() {
             <center className="page-section mb-4" id="Where we use">
               <img
                 src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/hospital-banner-2.jpg"}
-                style={{height:"380px", objectFit:"cover", borderRadius:"20px"}}
+                style={{ height: "380px", objectFit: "cover", borderRadius: "20px" }}
                 className="col-12 img-fluid w-100"
               />
             </center>
@@ -488,7 +437,7 @@ export default function Hospital() {
                         <h4 className="mb-3 mt-3">
                           Advanced Patient Monitoring
                         </h4>
-                        <p style={{color:"#8c8c8c"}}>
+                        <p style={{ color: "#8c8c8c" }}>
                           Real-time monitoring of patient vitals with AI-powered
                           insights to support proactive healthcare decisions.
                         </p>
@@ -506,7 +455,7 @@ export default function Hospital() {
                     <div className="item2">
                       <div>
                         <h4 className="mb-3 mt-3">Seamless Communication</h4>
-                        <p style={{color:"#8c8c8c"}}>
+                        <p style={{ color: "#8c8c8c" }}>
                           Streamlined communication platforms enhance
                           coordination between doctors, nurses, and healthcare
                           staff, ensuring better patient care.
@@ -525,7 +474,7 @@ export default function Hospital() {
                     <div className="item3">
                       <div>
                         <h4 className="mb-3 mt-3">Telemedicine Integration</h4>
-                        <p style={{color:"#8c8c8c"}}>
+                        <p style={{ color: "#8c8c8c" }}>
                           Supports remote consultations and care delivery,
                           reducing patient wait times and expanding access to
                           healthcare services.
@@ -546,7 +495,7 @@ export default function Hospital() {
                         <h4 className="mb-3 mt-3">
                           Electronic Health Records (EHR) Management
                         </h4>
-                        <p style={{color:"#8c8c8c"}}>
+                        <p style={{ color: "#8c8c8c" }}>
                           Digital transformation of patient histories and
                           medical data for seamless access, secure storage, and
                           efficient updates across departments.

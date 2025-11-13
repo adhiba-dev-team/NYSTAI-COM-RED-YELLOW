@@ -141,11 +141,8 @@ a:active {
 
 .overlay-mobile-nav p {
   padding: 8px;
-  text-decoration: none;
-  font-size: 26px;
+  font-size: 20px;
   color: #000000;
-  display: block;
-  transition: 0.3s;
 }
 
 .overlay-mobile-nav p:hover,
@@ -156,8 +153,8 @@ a:active {
 .overlay-mobile-nav .closebtn {
   position: absolute;
   top: 20px;
-  right: 45px;
-  font-size: 60px;
+  right: 25px;
+  font-size: 40px;
   color: #0f0f0f;
 }
 
@@ -169,10 +166,11 @@ a:active {
   .overlay-mobile-nav .closebtn {
     font-size: 40px;
     color: #0f0f0f;
-    top: 15px;
-    right: 35px;
+    top: 20px;
+    right: 25px;
   }
 }
+
 
 /* search start */
 .search-visible {

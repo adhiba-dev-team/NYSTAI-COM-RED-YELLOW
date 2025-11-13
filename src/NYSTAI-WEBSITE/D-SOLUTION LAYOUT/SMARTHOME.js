@@ -1,5 +1,4 @@
 import AsyncImage from "react-async-image";
-import LazyImage from "../common/LazyImage";
 import React, { useEffect, useState } from "react";
 import "./edusolution.css";
 import Footerproduct from "../A-LAYOUT/footer";
@@ -12,16 +11,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAngleRight,
-  faBuildingColumns,
-  faCarBurst,
   faCircleInfo,
   faHandshake,
   faHome,
-  faHouseSignal,
-  faIndustry,
-  faPlaceOfWorship,
-  faSchool,
   faWarehouse,
 } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "@mui/material/Drawer";
@@ -81,14 +73,24 @@ export default function Smarthomesolu() {
   const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = document.querySelector('.sub-nav-edu-solu')?.offsetHeight || 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
+      setOpen(false); // Close drawer after clicking
     }
   };
+
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
   useEffect(() => {
     if (modalOpen) {
       document.body.style.overflow = "hidden";
@@ -164,119 +166,47 @@ export default function Smarthomesolu() {
       {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div
-            className=""
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "20px 10px 10px 10px",
-              borderRadius: "10px 10px 0 0",
-            }}
-          >
-            <h4 style={{ color: "#ffB000", fontWeight: "bold" }}>
-              <span style={{ color: "#8c8c8c" }}>INTEGRATED</span> SOLUTIONS
-            </h4>
-          </div>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
-            <Link to="/nystai-solution-home">
-              <p style={{ color: "#ffB000" }}>
+            <a onClick={() => handleScrollToSection("Overview")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
-                  icon={faHouseSignal}
+                  icon={faHome}
                   className="me-3"
                 />
-                SMARTHOME
+                Overview
               </p>
-            </Link>
-            <Link to="/nystai-solution-Industrial">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                INDUSTRIAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-education">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faSchool}
-                  className="me-3"
-                />
-                EDUCATION
-              </p>
-            </Link>
-            <Link to="/nystai-solution-worship">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faPlaceOfWorship}
-                  className="me-3"
-                />
-                WORSHIP
-              </p>
-            </Link>
-            <Link to="/nystai-solution-vms">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCarBurst}
-                  className="me-3"
-                />
-                VMS
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Warehouse">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faWarehouse}
-                  className="me-3"
-                />
-                WAREHOUSE
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Hospital">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                HOSPITAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-banking">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faBuildingColumns}
-                  className="me-3"
-                />
-                BANKING
-              </p>
-            </Link>
-            <Link to="/nystai-solution-retail">
-              <p style={{ color: "#ffB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCircleInfo}
-                  className="me-3"
-                />
-                RETAIL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-parking">
-              <p style={{ color: "#ffB000" }}>
+            </a>
+            <a onClick={() => handleScrollToSection("What we offer")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
-                PARKING IOT SOLUTION
+                What we offer
               </p>
-            </Link>
+            </a>
+            <a onClick={() => handleScrollToSection("Features")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faCircleInfo}
+                  className="me-3"
+                />
+                Features
+              </p>
+            </a>
+            <a onClick={() => handleScrollToSection("Product display")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faWarehouse}
+                  className="me-3"
+                />
+                Product display
+              </p>
+            </a>
           </div>
         </Drawer>
       </Container>
@@ -284,13 +214,13 @@ export default function Smarthomesolu() {
       <section id="main-content" className="page-sections">
         <section className="container page-section mt-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
-            <h3 className="heading-34">NYSTAI’S HOME AUTOMATION </h3>
+            <h3 className="heading-34">NYSTAI'S HOME AUTOMATION </h3>
             <p className="text-block-60">
               Home automation has become essential for modern living, offering
               convenience, security, and peace of mind. With smart home products
               like CCTV cameras, alarms, and automation systems, homeowners can
               monitor their properties and control various aspects of their
-              homes with ease. NYSTAI’s home automation solutions combine these
+              homes with ease. NYSTAI's home automation solutions combine these
               functions into one seamless system, ensuring maximum security and
               efficiency. This integrated approach provides users with real-time
               updates and proactive monitoring, making homes smarter and safer.
@@ -304,7 +234,7 @@ export default function Smarthomesolu() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smarthome -1 (2).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-four-card-1.png"
                     }
                     alt="Card image cap"
                   />
@@ -312,7 +242,7 @@ export default function Smarthomesolu() {
                 <div className="card-body">
                   <h4 className="card-title">Vigilance</h4>
                   <p className="card-text">
-                    Real-time notifications with perfect security 
+                    Real-time notifications with perfect security
                   </p>
                 </div>
               </div>
@@ -324,14 +254,14 @@ export default function Smarthomesolu() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smarthome -1 (1).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-four-card-2.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">Centralization</h4>
-                  <p className="card-text">Proactive monitoring prevents problems.</p>
+                  <p className="card-text">Automated control from one device</p>
                 </div>
               </div>
             </div>
@@ -342,7 +272,7 @@ export default function Smarthomesolu() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smarthome -1 (1).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-four-card-3.png"
                     }
                     alt="Card image cap"
                   />
@@ -362,15 +292,15 @@ export default function Smarthomesolu() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smarthome -1 (1).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-four-card-4.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Anticipation</h4>
+                  <h4 className="card-title">Optimization</h4>
                   <p className="card-text">
-                    Proactive monitoring prevents problems.
+                    Customizable for Any Environment
                   </p>
                 </div>
               </div>
@@ -466,7 +396,7 @@ export default function Smarthomesolu() {
                       How NYSTAI Products Resolve These Issues
                     </h2>
                     <p>
-                      NYSTAI’s home automation system integrates CCTV cameras,
+                      NYSTAI's home automation system integrates CCTV cameras,
                       alarms, and controls into one platform. Users receive
                       real-time notifications and live video feeds on
                       smartphones, ensuring constant awareness. Designed for

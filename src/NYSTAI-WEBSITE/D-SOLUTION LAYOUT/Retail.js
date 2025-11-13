@@ -333,7 +333,7 @@ export default function Retailcategory() {
                 <center>
                   <AsyncImage
                     className="card-img-top"
-                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/wareicon2.webp"}
+                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/retail-images/retail-four-card-1.png"}
                     alt="Card image cap"
                   />
                 </center>
@@ -351,7 +351,7 @@ export default function Retailcategory() {
                 <center>
                   <AsyncImage
                     className="card-img-top"
-                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/wareicon3.webp"}
+                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/retail-images/retail-four-card-2.png"}
                     alt="Card image cap"
                   />
                 </center>
@@ -369,7 +369,7 @@ export default function Retailcategory() {
                 <center>
                   <AsyncImage
                     className="card-img-top"
-                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/wareicon.webp"}
+                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/retail-images/retail-four-card-3.png"}
                     alt="Card image cap"
                   />
                 </center>
@@ -387,14 +387,14 @@ export default function Retailcategory() {
                 <center>
                   <AsyncImage
                     className="card-img-top"
-                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/wareicon.webp"}
+                    src={"/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/retail-images/retail-four-card-4.png"}
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Innovation</h4>
+                  <h4 className="card-title">Customer Engagement</h4>
                   <p className="card-text">
-                    Digital tools enhance communication, organization.
+                    Enhancing shopper interaction with smart, personalized retail experiences
                   </p>
                 </div>
               </div>

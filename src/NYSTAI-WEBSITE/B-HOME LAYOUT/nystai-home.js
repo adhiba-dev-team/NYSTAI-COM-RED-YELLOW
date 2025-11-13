@@ -48,9 +48,9 @@ import { Button, Modal } from "react-bootstrap";
 AOS.init();
 
 export default function Nystaihome() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [modalShow, setModalShow] = useState(false);
 
   const images = getImages();
@@ -148,7 +148,7 @@ export default function Nystaihome() {
           <div id="orange-sectionmain3">
             <div className="container">
               <div className="d-flex justify-content-end">
-                <div className="col-12 col-md-5">
+                <div className="col-12 col-md-6">
                   <h1 id="orange-section-title">
                     Our Integrated Video alarm linkage solution is perfect for the vigilant homeowner
                   </h1>
@@ -1151,333 +1151,119 @@ const Card = () => {
   );
 };
 
+
+
 // Client testimonial
+
 const Card2 = () => {
-  const sliderRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 10;
-  const next = () => {
-    sliderRef.current.slickNext();
+  const testimonials = [
+    {
+      name: "vasudevan p.k",
+      role: "Electrical contractor",
+      text: "The most recommended water saver.The device has been installed in my house a year back and it's doing a great job.",
+      rating: 5
+    },
+    {
+      name: "KAVERY GROUP OF COMPANIES",
+      role: "Ginnings Mills",
+      text: "Best Wireless Tank Water Level manager. Recommend this rather than go for long wires to the sump and overhead tanks. No manual intervention required.",
+      rating: 5
+    },
+    {
+      name: "Ishwarya RajendraKumar k",
+      role: "Home Maker",
+      text: "The most recommended water saver.The device has been installed in my house a year back and it's doing a great job.",
+      rating: 5
+    },
+    {
+      name: "Hari Prasath.S",
+      role: "Software Developer",
+      text: "I've a excellent experience with Adhiba Technologies and their innovative smart class sensors. The quality and functionality of their sensors have greatly enhanced !!!",
+      rating: 5
+    },
+    {
+      name: "Selva Kumar.P",
+      role: "Civil Engineer",
+      text: "Wireless Tank Manager - Adhiba Labs Private Limited I have been using it for the last 6 months and it's very nice, no worries about water wastage..",
+      rating: 5
+    },
+    {
+      name: "Logaraj Logu",
+      role: "Auditor",
+      text: "Working perfect! We installed in our lodge We have been using SS Sensors type for past 5 years Recommend for commercial purposes!!!!",
+      rating: 5
+    },
+    {
+      name: "Boopathi.S",
+      role: "Farmer",
+      text: "Really a good product & must recommended one.i had Installed this device 6months back & working with perfect conditions.",
+      rating: 5
+    }
+  ];
+
+  // Duplicate testimonials for infinite scroll effect
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
+  const renderStars = (rating) => {
+    return Array.from({ length: rating }, (_, i) => (
+      <span key={i} className="star">★</span>
+    ));
   };
-  const previous = () => {
-    sliderRef.current.slickPrev();
-  };
-  const settings = {
-    dots: false,
-    infinite: false,
-    autoplay: false,
-    loop: false,
-    autoplaySpeed: 2000,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    beforeChange: (current, next) => setCurrentSlide(next),
-    responsive: [
-      {
-        breakpoint: 1250,
-        settings: {
-          slidesToShow: 2.5,
-          slidesToScroll: 5,
-        },
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 0,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
   return (
-    <>
-      <div class="section-testmonials mb-5">
-
-        <div class="swiper-testmonials container">
-          <Slider ref={sliderRef} {...settings} className="py-2 ">
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4> vasudevan p.k</h4>
-                          <h6>Electrical contractor</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "The most recommended water saver.The device has been
-                      installed in my house a year back and it's doing a great
-                      job."
-                    </p>
-                  </div>
-                </div>
+    <div className="section-testmonials-vertical">
+      {/* Left Cards */}
+      <div className="testimonial-column left-column">
+        {duplicatedTestimonials.map((testimonial, index) => (
+          <div key={`left-${index}`} className="testimonial-card">
+            <div className="card-header">
+              <div className="avatar-circle">
+                <img
+                  src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
+                  alt="logo"
+                />
+              </div>
+              <div className="card-info">
+                <h4>{testimonial.name}</h4>
+                <h6>{testimonial.role}</h6>
               </div>
             </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4> KAVERY GROUP OF COMPANIES</h4>
-                          <h6>Ginnings Mills</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "Best Wireless Tank Water Level manager. Recommend this
-                      rather than go for long wires to the sump and overhead
-                      tanks. No manual intervention required."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4> Ishwarya RajendraKumar k</h4>
-                          <h6>Home Maker</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "The most recommended water saver.The device has been
-                      installed in my house a year back and it's doing a great
-                      job."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4> Hari Prasath.S</h4>
-                          <h6>Software Developer</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "I've a excellent experience with Adhiba Technologies and
-                      their innovative smart class sensors. The quality and
-                      functionality of their sensors have greatly enhanced !!!"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4>Selva Kumar.P</h4>
-                          <h6>Civil Engineer</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "Wireless Tank Manager - Adhiba Labs Private Limited I
-                      have been using it for the last 6 months and it's very
-                      nice, no worries about water wastage.."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div class="title-slide">
-                          <h4> Logaraj Logu</h4>
-                          <h6>Auditor</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "Working perfect! We installed in our lodge We have been
-                      using SS Sensors type for past 5 years Recommend for
-                      commercial purposes!!!!"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3">
-              <div className="item">
-                <div class="swiper-slide">
-                  <div class="card-slide">
-                    <div class="head-slide">
-                      <div class="header-slide">
-                        <div class="header-slide-circle">
-                          <AsyncImage
-                            src={
-                              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
-                            }
-                            alt="nys-pro-image"
-                            className="img-fluid"
-                          />
-                          {/*  <AsyncImage src={"/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"} className="img-fluid" /> */}
-                        </div>
-                        <div class="title-slide">
-                          <h4> Boopathi.S</h4>
-                          <h6>Farmer</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-slide">
-                      "Really a good product & must recommended one.i had
-                      Installed this device 6months back & working with perfect
-                      conditions."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Slider>
-        </div>
-
-        <div class="column-testmonials">
-          {/* <div class="section-details">
-            <h4 class="name-section">DON’T JUST TAKE</h4>
-            <h2 class="title-section">
-              {" "}
-              OUR WORD <br />
-              <b>FOR IT</b>
-            </h2>
-          </div> */}
-          <div class="swiper-button-testmonials-prev">
-            <div className="arrow ms-4 mt-4">
-              <button
-                onClick={previous}
-                style={{
-                  color: currentSlide === 0 ? "#fff" : "#fff",
-                  backgroundColor: currentSlide === 0 ? "#ffB00050" : "#ffB000",
-                }}
-              >
-                <FontAwesomeIcon icon={faAngleLeft} />
-              </button>
-              <button
-                onClick={next}
-                style={{
-                  color:
-                    currentSlide >= totalSlides - settings.slidesToShow
-                      ? "#fff"
-                      : "#fff",
-                  backgroundColor:
-                    currentSlide >= totalSlides - settings.slidesToShow
-                      ? "#ffB00050"
-                      : "#ffB000",
-                  marginLeft: "10px",
-                }}
-              >
-                <FontAwesomeIcon icon={faAngleRight} />
-              </button>
-            </div>
+            <p className="card-text">"{testimonial.text}"</p>
+            <div className="card-rating">{renderStars(testimonial.rating)}</div>
           </div>
-        </div>
-
+        ))}
       </div>
-    </>
+
+      {/* Center Text */}
+      <div className="testimonial-center">
+        <h4 className="center-subtitle">DON'T JUST TAKE</h4>
+        <h2 className="center-title">
+          OUR WORD<br />
+          <b>FOR IT</b>
+        </h2>
+      </div>
+
+      {/* Right Cards */}
+      <div className="testimonial-column right-column">
+        {duplicatedTestimonials.map((testimonial, index) => (
+          <div key={`right-${index}`} className="testimonial-card">
+            <div className="card-header">
+              <div className="avatar-circle">
+                <img
+                  src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/homepage-testimonal-logo.webp"
+                  alt="logo"
+                />
+              </div>
+              <div className="card-info">
+                <h4>{testimonial.name}</h4>
+                <h6>{testimonial.role}</h6>
+              </div>
+            </div>
+            <p className="card-text">"{testimonial.text}"</p>
+            <div className="card-rating">{renderStars(testimonial.rating)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };

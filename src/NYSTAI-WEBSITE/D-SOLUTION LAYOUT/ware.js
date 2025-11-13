@@ -81,8 +81,16 @@ export default function Warehouse() {
   const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = document.querySelector('.sub-nav-edu-solu')?.offsetHeight || 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
+      setOpen(false);
     }
   };
 
@@ -165,130 +173,58 @@ export default function Warehouse() {
       {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div
-            className=""
-            style={{
-              backgroundColor: "#f5f5f5",
-              padding: "20px 10px 10px 10px",
-              borderRadius: "10px 10px 0 0",
-            }}
-          >
-            <h4 style={{ color: "#FFB000", fontWeight: "bold" }}>
-              <span style={{ color: "#8c8c8c" }}>INTEGRATED</span> SOLUTIONS
-            </h4>
-          </div>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
-            <Link to="/nystai-solution-home">
-              <p style={{ color: "#FFB000" }}>
+            <a onClick={() => handleScrollToSection("Overview")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
-                  icon={faHouseSignal}
+                  icon={faHome}
                   className="me-3"
                 />
-                SMARTHOME
+                Overview
               </p>
-            </Link>
-            <Link to="/nystai-solution-Industrial">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                INDUSTRIAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-education">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faSchool}
-                  className="me-3"
-                />
-                EDUCATION
-              </p>
-            </Link>
-            <Link to="/nystai-solution-worship">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faPlaceOfWorship}
-                  className="me-3"
-                />
-                WORSHIP
-              </p>
-            </Link>
-            <Link to="/nystai-solution-vms">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCarBurst}
-                  className="me-3"
-                />
-                VMS
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Warehouse">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faWarehouse}
-                  className="me-3"
-                />
-                WAREHOUSE
-              </p>
-            </Link>
-            <Link to="/nystai-solution-Hospital">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faIndustry}
-                  className="me-3"
-                />
-                HOSPITAL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-banking">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faBuildingColumns}
-                  className="me-3"
-                />
-                BANKING
-              </p>
-            </Link>
-            <Link to="/nystai-solution-retail">
-              <p style={{ color: "#FFB000" }}>
-                <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
-                  icon={faCircleInfo}
-                  className="me-3"
-                />
-                RETAIL
-              </p>
-            </Link>
-            <Link to="/nystai-solution-parking">
-              <p style={{ color: "#FFB000" }}>
+            </a>
+            <a onClick={() => handleScrollToSection("What we offer")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
                   style={{ color: "#8c8c8c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
-                PARKING IOT SOLUTION
+                What we offer
               </p>
-            </Link>
+            </a>
+            <a onClick={() => handleScrollToSection("Features")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faCircleInfo}
+                  className="me-3"
+                />
+                Features
+              </p>
+            </a>
+            <a onClick={() => handleScrollToSection("Product display")}>
+              <p style={{ color: "#ffB000", cursor: "pointer" }}>
+                <FontAwesomeIcon
+                  style={{ color: "#8c8c8c" }}
+                  icon={faWarehouse}
+                  className="me-3"
+                />
+                Product display
+              </p>
+            </a>
           </div>
         </Drawer>
       </Container>
       <section id="main-content" className="page-sections">
         <section className="page-section mt-5 mb-5 container" id="Overview">
           <div className="mini-block-statement w-clearfix mt-3">
-            <h3 className="heading-34">NYSTAI’S WAREHOUSE SOLUTIONS</h3>
+            <h3 className="heading-34">NYSTAI'S WAREHOUSE SOLUTIONS</h3>
             <p className="text-block-60">
               In warehouses, safety is paramount as heavy machinery and
               fast-paced operations pose risks to workers and equipment.
-              NYSTAI’s warehouse solutions offer essential products like
+              NYSTAI's warehouse solutions offer essential products like
               anti-collision devices, forklift safety lights, alert systems,
               cameras, and 4G helmets with walkie-talkies. These solutions
               enhance visibility, communication, and accident prevention,
@@ -307,7 +243,7 @@ export default function Warehouse() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/ware - 1 (4).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-1.png"
                     }
                     alt="Card image cap"
                   />
@@ -329,7 +265,7 @@ export default function Warehouse() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/ware - 1 (2).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-2.png"
                     }
                     alt="Card image cap"
                   />
@@ -351,7 +287,7 @@ export default function Warehouse() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/ware - 1 (5).webp"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-3.png"
                     }
                     alt="Card image cap"
                   />
@@ -373,17 +309,17 @@ export default function Warehouse() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/ware - 1 (5).webp"
+                       "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-4.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Quick communication with workers{" "}
+                    Optimizes Workflow Effortlessly{" "}
                   </h4>
                   <p className="card-text">
-                    Keeps teams connected and informed.{" "}
+                    Streamlines daily operations for faster.{" "}
                   </p>
                 </div>
               </div>

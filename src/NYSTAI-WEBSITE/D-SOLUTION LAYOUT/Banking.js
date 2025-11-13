@@ -1,5 +1,4 @@
 import AsyncImage from "react-async-image";
-import LazyImage from "../common/LazyImage";
 import "./edusolution.css";
 import React, { useEffect, useState } from "react";
 import "./edusolution.css";
@@ -11,18 +10,15 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAngleRight,
   faBuildingColumns,
   faCarBurst,
   faCircleInfo,
   faHandshake,
-  faHome,
   faHouseSignal,
   faIndustry,
   faPlaceOfWorship,
   faSchool,
   faWarehouse,
-  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "@mui/material/Drawer";
 export default function Banking() {
@@ -336,7 +332,7 @@ export default function Banking() {
                 <div className="card-body">
                   <h4 className="card-title">Unmatched Security</h4>
                   <p className="card-text">
-                    Advanced surveillance and monitoring systems
+                    Customizable for Any Environment
                   </p>
                 </div>
               </div>
@@ -394,9 +390,9 @@ export default function Banking() {
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Customer Focused</h4>
+                  <h4 className="card-title">Digital Transformation</h4>
                   <p className="card-text">
-                    Streamlined processes and automated tools
+                    Customizable for Any Environment
                   </p>
                 </div>
               </div>

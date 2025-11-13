@@ -7,7 +7,6 @@ import { useState } from "react";
 import $ from "jquery";
 import {
   faLinkedin,
-  faTelegramPlane,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faBuildingColumns,
@@ -23,11 +22,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faAngleDoubleUp,
-  faMagnifyingGlass,
-  faPersonWalkingLuggage,
   faPhone,
-  faRightToBracket,
-  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBasket, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -40,6 +35,13 @@ import { faEnvelope, faBlog } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import LogoutButton from "./logoutbutton";
+
+
+import Drawer from "@mui/material/Drawer";
+import { faChevronDown, faChevronUp, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 const Layout = () => {
   const location = useLocation();
@@ -167,8 +169,30 @@ const Layout = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
+
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+    setSolutionsOpen(false);
+  };
+
+  const toggleSolutions = () => {
+    setSolutionsOpen(!solutionsOpen);
+  };
+
+
   return (
     <>
+      {/* Desktop Navbar Start */}
       <div className="body-nav">
         <div className=" col-12  mainnav-nystai ">
           <div className="logo-div-nystai col-lg-2 col-md-2">
@@ -666,7 +690,7 @@ const Layout = () => {
           </div>
         </section>
       </div>
-      {/* second nav end */}
+      {/* Desktop Navbar end */}
 
       {/* mobile navbar start */}
       <div className="nav-mobile-nystai sticky-top">
@@ -674,7 +698,7 @@ const Layout = () => {
           <div className="container-fluid">
             <div>
               <Link to="/nystai-home">
-                <AsyncImage
+                <img
                   src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/nystai-main-logo.png"
                   className="img-fluid logo-nystai active"
                   alt="NYSTAILOGO"
@@ -682,87 +706,177 @@ const Layout = () => {
               </Link>
             </div>
             <div>
-              <div
-                id="myNav"
-                className={`overlay-mobile-nav ${navOpen ? "open" : ""}`}
-              >
-                <p className="closebtn" onClick={closeNav}>
-                  &times;
-                </p>
-                <div className="container overlay-content">
-                  <p className="nav-link">
-                    <Link to="/nystai-product" onClick={closeNav}>
-                      PRODUCTS
-                    </Link>
-                  </p>
-                  <p className="nav-link">
-                    <Link to="/nystai-solution-home" onClick={closeNav}>
-                      INTEGRATED SOLUTIONS
-                    </Link>
-                  </p>
-                  <p className="nav-link">
-                    <Link to="/nystai-PLAN" onClick={closeNav}>
-                      PROTECT PLAN
-                    </Link>
-                  </p>
-                  <p className="nav-link">
-                    <Link to="/nystai-SERVICE" onClick={closeNav}>
-                      SERVICE
-                    </Link>
-                  </p>
-                  <p className="nav-link">
-                    <Link to="/nystai-support" onClick={closeNav}>
-                      SUPPORT
-                    </Link>
-                  </p>
-                  <div className="">
-                    <div className="right-ssl-icon-nystai-number">
-                      <p
-                        className="text-number-nystai"
-                        href="tel:+91 81899 77700"
-                      >
-                        <FontAwesomeIcon
-                          icon={faPhone}
-                          style={{ color: "#ee890a", fontSize: "20px" }}
-                          className="me-2"
-                        />
-                        +91 81899 77700
-                      </p>
-                    </div>
-                    {/* <div className="d-flex">
-                      <div className="div-2-icon">
-                        <p>
-                          <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-search ricon-text-nystai" style={{ cursor: "pointer" }} />
-                        </p>
-                      </div>
-                      <p
-                        data-tooltip-id="my-tooltip"
-                        data-tooltip-content="Sign in"
-                        onMouseEnter={() => setHovered(true)}
-                        onMouseLeave={() => setHovered(false)}
-                        data-tip="Sign In"
-                      >
-                        <FontAwesomeIcon
-                          icon={hovered ? faPersonWalkingLuggage : faRightToBracket}
-                          className="ricon-text-nystai"
-                        />
-                      </p>
-                      <Tooltip id="my-tooltip" place="bottom" className="tooltip" />
-                      <p>
-                        <FontAwesomeIcon icon={faShoppingBasket} bounce className="ricon-text-nystai" />
-                      </p>
-                    </div> */}
-                  </div>
-                </div>
-              </div>
               <span>
-                <p onClick={openNav} className="close-mobileinav-icon mb-0">
-                  &#9776;
+                <p onClick={toggleDrawer(true)} className="close-mobileinav-icon mb-0" style={{ cursor: 'pointer' }}>
+                  <FontAwesomeIcon icon={faBars} />
                 </p>
               </span>
             </div>
           </div>
         </nav>
+
+        <Drawer
+          open={drawerOpen}
+          onClose={toggleDrawer(false)}
+          PaperProps={{
+            sx: {
+              width: '320px',
+              backgroundColor: '#fff',
+            }
+          }}
+        >
+          <div className="drawer-content" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            {/* Close Button */}
+            <div style={{ padding: '20px 0', textAlign: 'right', borderBottom: '1px solid #eee' }}>
+              <FontAwesomeIcon
+                icon={faTimes}
+                onClick={toggleDrawer(false)}
+                style={{ fontSize: '24px', cursor: 'pointer', color: '#333' }}
+              />
+            </div>
+
+            {/* Navigation Links */}
+            <div style={{ flex: 1, padding: '10px 0' }}>
+              <div className="nav-link" style={{ padding: '15px', borderBottom: '1px solid #f0f0f0' }}>
+                <Link to="/nystai-product" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
+                  PRODUCTS
+                </Link>
+              </div>
+
+              {/* Integrated Solutions with Dropdown */}
+              <div style={{ borderBottom: '1px solid #f0f0f0' }}>
+                <div
+                  onClick={toggleSolutions}
+                  style={{
+                    padding: '15px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <span style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
+                    INTEGRATED SOLUTIONS
+                  </span>
+                  <FontAwesomeIcon
+                    icon={solutionsOpen ? faChevronUp : faChevronDown}
+                    style={{ color: '#ee890a', fontSize: '14px' }}
+                  />
+                </div>
+
+                {/* Dropdown Content */}
+                {solutionsOpen && (
+                  <>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-home" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          SMARTHOME
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-Industrial" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          INDUSTRIAL
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-education" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          EDUCATION
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-worship" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          WORSHIP
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-vms" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          VMS
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-Warehouse" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          WAREHOUSE
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-Hospital" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          HOSPITAL
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-banking" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          BANKING
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px', marginBottom: "2px" }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-retail" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          RETAIL
+                        </Link>
+                      </div>
+                    </div>
+                    <div style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px' }}>
+                      <div style={{ padding: '12px 20px' }}>
+                        <Link to="/nystai-solution-parking" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#666', fontSize: '14px' }}>
+                          PARKING IOT SOLUTION
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <div className="nav-link" style={{ padding: '15px', borderBottom: '1px solid #f0f0f0' }}>
+                <Link to="/nystai-PLAN" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
+                  PROTECT PLAN
+                </Link>
+              </div>
+
+              <div className="nav-link" style={{ padding: '15px', borderBottom: '1px solid #f0f0f0' }}>
+                <Link to="/nystai-SERVICE" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
+                  SERVICE
+                </Link>
+              </div>
+
+              <div className="nav-link" style={{ padding: '15px', borderBottom: '1px solid #f0f0f0' }}>
+                <Link to="/nystai-support" onClick={closeDrawer} style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
+                  SUPPORT
+                </Link>
+              </div>
+            </div>
+
+            {/* Phone Number at Bottom */}
+            <div style={{ padding: '20px', borderTop: '1px solid #eee' }}>
+              <div className="right-ssl-icon-nystai-number">
+                <a
+                  href="tel:+918189977700"
+                  style={{ textDecoration: 'none', color: '#333', display: 'flex', alignItems: 'center' }}
+                >
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    style={{ color: "#ee890a", fontSize: "20px", marginRight: '10px' }}
+                  />
+                  +91 81899 77700
+                </a>
+              </div>
+            </div>
+          </div>
+        </Drawer>
       </div>
       {/* mobile navbar end */}
 
