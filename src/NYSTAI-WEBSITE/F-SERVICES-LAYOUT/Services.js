@@ -50,10 +50,10 @@ export default function Services() {
 
         <section
           className="container-fluid py-5"
-          style={{ backgroundColor: "#FFB000" }}
+          style={{ backgroundColor: "#FFEABACC" }}
         >
           <div className="container">
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
               <div className="col">
                 <div className="card border-0 shadow-sm position-relative overflow-hidden">
                   <img
@@ -62,11 +62,11 @@ export default function Services() {
                     style={{ height: "300px", objectFit: "cover" }}
                     alt="Customer-Centric Approach"
                   />
-                  <div className="card-body bg-white position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{height:"120px"}}>
-                    <h5 className="card-title text-dark fw-bold">
+                  <div className="card-body position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{ height: "130px", backgroundColor:"#FF474E8C" }}>
+                    <h5 className="card-title text-white fw-bold">
                       Customer Approach
                     </h5>
-                    <p className="card-text text-muted mb-0">
+                    <p className="card-text text-white mb-0">
                       Designing smart home solutions for customer needs.
                     </p>
                   </div>
@@ -81,11 +81,11 @@ export default function Services() {
                     style={{ height: "300px", objectFit: "cover" }}
                     alt="Precision Manufacturing"
                   />
-                  <div className="card-body bg-white position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{height:"120px"}}>
-                    <h5 className="card-title text-dark fw-bold">
+                  <div className="card-body position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{ height: "130px", backgroundColor:"#FF474E8C" }}>
+                    <h5 className="card-title text-white fw-bold">
                       Precision Manufacturing
                     </h5>
-                    <p className="card-text text-muted mb-0">
+                    <p className="card-text text-white mb-0">
                       Leveraging tech for superior, cutting-edge manufacturing.
                     </p>
                   </div>
@@ -100,11 +100,11 @@ export default function Services() {
                     style={{ height: "300px", objectFit: "cover" }}
                     alt="Timely Delivery & Support"
                   />
-                  <div className="card-body bg-white position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{height:"120px"}}>
-                    <h5 className="card-title text-dark fw-bold">
+                  <div className="card-body position-absolute bottom-0 start-0 end-0 p-3 bg-opacity-75" style={{ height: "130px", backgroundColor:"#FF474E8C" }}>
+                    <h5 className="card-title text-white fw-bold">
                       Timely Delivery & Support
                     </h5>
-                    <p className="card-text text-muted mb-0">
+                    <p className="card-text text-white mb-0">
                       Prioritizing satisfaction through timely, exceptional
                       service.
                     </p>
@@ -125,21 +125,20 @@ export default function Services() {
             </h2>
           </div>
 
-          <section className="container service-our-serv-card">
+          <section className="container service-our-serv-card ">
             <div className="card mb-3">
               <div className="row">
-                <div className="col-md-4 p-0 d-flex justify-content-center align-items-center">
+                <div className="col-md-6 p-0 d-flex justify-content-center align-items-center">
                   <AsyncImage
                     src={
-                      "/IMAGES-VIDEOS/D-IMG-PLAN-LAYOUT/protectplan-1 (1).webp"
+                      "/IMAGES-VIDEOS/D-IMG-PLAN-LAYOUT/plan_lft_img.png"
                     }
                     className="img-fluid w-100"
                     alt="Specialized Safeguarding"
                   />
                 </div>
                 <div
-                  className="col-md-8 d-flex justify-content-center align-items-center"
-                  style={{ backgroundColor: "#f9f9f9" }}
+                  className="col-md-6 d-flex justify-content-center align-items-center"
                 >
                   <div className="card-body">
                     <h5 className="card-title" style={{ color: "#FFB000" }}>Specialized Safeguarding</h5>
@@ -159,10 +158,10 @@ export default function Services() {
             <div className="card mb-3">
               <div className="row">
                 {/* Image first on mobile, last on larger screens */}
-                <div className="col-md-4 p-0 d-flex justify-content-center align-items-center order-first order-md-last">
+                <div className="col-md-6 p-0 d-flex justify-content-center align-items-center order-first order-md-last">
                   <AsyncImage
                     src={
-                      "/IMAGES-VIDEOS/D-IMG-PLAN-LAYOUT/protectplan-1 (3).webp"
+                      "/IMAGES-VIDEOS/D-IMG-PLAN-LAYOUT/plan_ryt_img.png"
                     }
                     className="img-fluid w-100"
                     alt="Deployment Services"
@@ -170,8 +169,7 @@ export default function Services() {
                 </div>
                 {/* Text content */}
                 <div
-                  className="col-md-8 d-flex justify-content-center align-items-center"
-                  style={{ backgroundColor: "#f9f9f9" }}
+                  className="col-md-6 d-flex justify-content-center align-items-center"
                 >
                   <div className="card-body">
                     <h5 className="card-title" style={{ color: "#FFB000" }}>Deployment Services</h5>

@@ -382,7 +382,7 @@ export default function WORSHIP() {
                 <div className="card-body">
                   <h4 className="card-title">Connectivity</h4>
                   <p className="card-text">
-                    Digital tools enhance communication.
+                    Smart energy and crowd management solutions.
                   </p>
                 </div>
               </div>

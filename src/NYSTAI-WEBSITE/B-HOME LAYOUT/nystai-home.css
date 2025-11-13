@@ -126,30 +126,33 @@
 }
 
 #orange-sectionmain3 {
-  background-image: url("../../../public/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/Parallax-5.webp");
+  background-image: url("../../../public/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/Parallax-6.jpg");
   background-attachment: fixed;
-  /* background-size: cover; */
+  background-size: cover;
   box-sizing: border-box;
-  text-align: center;
-  padding: 5% 0;
+  background-repeat: no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
 }
 
 #orange-sectionmain3 h1 {
-  background-color: #ED1C245E;
+  background-color: #ED1C2445;
   border-radius: 15px;
   font-weight: bolder;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: clamp(16px, 4vw, 30px);
+  font-size: clamp(16px, 4vw, 28px);
+  margin-bottom: 0;
 }
 
-#orange-sectionmain3 p {
+/* #orange-sectionmain3 p {
   color: #000000;
   padding: 1% 0 2% 0;
   line-height: 30px;
   font-size: 23px;
-}
+} */
 
 .logoscroll {
   display: flex;
@@ -277,7 +280,7 @@
   }
 
   #orange-sectionmain3 h1 {
-    padding: 3% 0 3% 0;
+    padding: 40px;
     font-weight: bolder;
     text-transform: uppercase;
   }
@@ -322,8 +325,12 @@
     width: 100%;
   }
 
+  #orange-sectionmain3 {
+    height: 250px;
+  }
+
   #orange-sectionmain3 h1 {
-    padding: 3% 0 3% 0;
+    padding: 25px;
     font-weight: bolder;
     text-transform: uppercase;
   }

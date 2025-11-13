@@ -7,9 +7,6 @@ import { products } from "../C-PRODUCT LAYOUT/datass.js";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import $ from "jquery";
-import Swiper from "swiper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
@@ -301,7 +298,7 @@ export default function Smarthomesolu() {
           </div>
 
           <div className="card-wrapper card-deck-custom row mt-5">
-            <div className="col-lg-4 col-md-6 col-sm-6 mb-2">
+            <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
               <div className="card">
                 <center>
                   <AsyncImage
@@ -315,13 +312,13 @@ export default function Smarthomesolu() {
                 <div className="card-body">
                   <h4 className="card-title">Vigilance</h4>
                   <p className="card-text">
-                    Real-time notifications for security
+                    Real-time notifications with perfect security 
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6 mb-2">
+            <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
               <div className="card">
                 <center>
                   <AsyncImage
@@ -334,12 +331,32 @@ export default function Smarthomesolu() {
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">Centralization</h4>
-                  <p className="card-text">Automated control from one device</p>
+                  <p className="card-text">Proactive monitoring prevents problems.</p>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6 mb-2">
+            <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
+              <div className="card">
+                <center>
+                  <AsyncImage
+                    className="card-img-top"
+                    src={
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smarthome -1 (1).webp"
+                    }
+                    alt="Card image cap"
+                  />
+                </center>
+                <div className="card-body">
+                  <h4 className="card-title">Anticipation</h4>
+                  <p className="card-text">
+                    Proactive monitoring prevents problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
               <div className="card">
                 <center>
                   <AsyncImage
@@ -393,7 +410,7 @@ export default function Smarthomesolu() {
                       alt=""
                       loading="lazy"
                       src={
-                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smartthree-2.webp"
+                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-1.png"
                       }
                       className="home-scroll_photo w-100 rounded-4 img-fluid"
                       style={{ maxHeight: "738px", objectFit: "cover" }}
@@ -422,7 +439,7 @@ export default function Smarthomesolu() {
                       alt=""
                       loading="lazy"
                       src={
-                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smartthree-2.webp"
+                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-2.png"
                       }
                       className="home-scroll_photo w-100 rounded-4 img-fluid"
                       style={{ maxHeight: "738px", objectFit: "cover" }}
@@ -438,7 +455,7 @@ export default function Smarthomesolu() {
                       alt=""
                       loading="lazy"
                       src={
-                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/smartthree-2.webp"
+                        "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-3.png"
                       }
                       className="home-scroll_photo w-100 rounded-4 img-fluid"
                       style={{ maxHeight: "738px", objectFit: "cover" }}
@@ -486,7 +503,7 @@ export default function Smarthomesolu() {
                         <AsyncImage
                           className="light-icon"
                           src={
-                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/icon-solu-smart - 1 (5).webp"
+                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-icon-1.png"
                           }
                           alt="icon"
                         />
@@ -513,7 +530,7 @@ export default function Smarthomesolu() {
                         <AsyncImage
                           className="light-icon"
                           src={
-                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/icon-solu-smart - 1 (4).webp"
+                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-icon-2.png"
                           }
                           alt="icon"
                         />
@@ -526,8 +543,7 @@ export default function Smarthomesolu() {
                         </h3>
                         <p class="card-decription">
                           Receive instant notifications for suspicious
-                          activities or emergencies, keeping homeowners informed
-                          and secure.{" "}
+                          activities or emergencies, homeowners informed.{" "}
                         </p>
                         <h6 class="card-count">02</h6>
                       </div>
@@ -541,7 +557,7 @@ export default function Smarthomesolu() {
                         <AsyncImage
                           className="light-icon"
                           src={
-                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/icon-solu-smart - 1 (1).webp"
+                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-icon-3.png"
                           }
                           alt="icon"
                         />
@@ -554,7 +570,7 @@ export default function Smarthomesolu() {
                         </h3>
                         <p class="card-decription">
                           Access live footage from security cameras directly on
-                          your smartphone, ensuring constant surveillance.{" "}
+                          your smartphone, constant surveillance.{" "}
                         </p>
                         <h6 class="card-count">03</h6>
                       </div>
@@ -568,7 +584,7 @@ export default function Smarthomesolu() {
                         <AsyncImage
                           className="light-icon"
                           src={
-                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/icon-solu-smart - 1 (3).webp"
+                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-icon-4.png"
                           }
                           alt="icon"
                         />
@@ -595,7 +611,7 @@ export default function Smarthomesolu() {
                         <AsyncImage
                           className="light-icon"
                           src={
-                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/icon-solu-smart - 1 (2).webp"
+                            "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/Home-Automation-Images/home-auto-icon-5.png"
                           }
                           alt="icon"
                         />
@@ -603,7 +619,7 @@ export default function Smarthomesolu() {
                       <div class="card-detail">
                         <h3 class="card-heading">
                           <a href="#">
-                            Comprehensive Automation
+                            Automation
                           </a>
                         </h3>
                         <p class="card-decription">

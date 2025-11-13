@@ -97,7 +97,7 @@ export default function Protectplan() {
                 </div>
                 <div
                   className="col-md-6 d-flex justify-content-center align-items-center"
-                  // style={{ backgroundColor: "#f9f9f9" }}
+                // style={{ backgroundColor: "#f9f9f9" }}
                 >
                   <div className="card-body">
                     <h5 className="card-title">
@@ -129,7 +129,7 @@ export default function Protectplan() {
                 </div>
                 <div
                   className="col-md-6 d-flex justify-content-center align-items-center"
-                  // style={{ backgroundColor: "#f9f9f9" }}
+                // style={{ backgroundColor: "#f9f9f9" }}
                 >
                   <div className="card-body">
                     <h5 className="card-title">
@@ -161,7 +161,7 @@ export default function Protectplan() {
                 </div>
                 <div
                   className="col-md-6 d-flex justify-content-center align-items-center"
-                  // style={{ backgroundColor: "#f9f9f9" }}
+                // style={{ backgroundColor: "#f9f9f9" }}
                 >
                   <div className="card-body">
                     <h5 className="card-title">
@@ -184,17 +184,18 @@ export default function Protectplan() {
           </section>
         </section>
 
-        <section>
-          <section className="bgfpc">
-            <div id="orange-sectionmain3">
-              <div className="container">
-                <h1 id="orange-section-title">
-                  Our Integrated Video alarm linkage solution <br />
-                  is perfect for the vigilant homeowner
-                </h1>
+        <section className="bgfpc mt-5">
+          <div id="orange-sectionmain3">
+            <div className="container">
+              <div className="d-flex justify-content-end">
+                <div className="col-12 col-md-5">
+                  <h1 id="orange-section-title">
+                    Our Integrated Video alarm linkage solution is perfect for the vigilant homeowner
+                  </h1>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
 
         {/* PLAN COMPARISON */}

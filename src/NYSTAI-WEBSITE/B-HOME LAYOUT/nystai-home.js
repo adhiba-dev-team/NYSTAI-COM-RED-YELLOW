@@ -147,10 +147,13 @@ export default function Nystaihome() {
         <section className="bgfpc mt-5">
           <div id="orange-sectionmain3">
             <div className="container">
-              <h1 id="orange-section-title">
-                Our Integrated Video alarm linkage solution <br />
-                is perfect for the vigilant homeowner
-              </h1>
+              <div className="d-flex justify-content-end">
+                <div className="col-12 col-md-5">
+                  <h1 id="orange-section-title">
+                    Our Integrated Video alarm linkage solution is perfect for the vigilant homeowner
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -223,9 +226,9 @@ export default function Nystaihome() {
           <p className="mt-5 fw-bold">Key Features:</p>
           <div className="row">
             <div className="col-12 col-sm-6 col-lg-3 mb-3">
-              <div className="box d-flex align-items-start gap-3 w-100">
+              <div className="box text-center gap-3 w-100">
                 <span>
-                  <FontAwesomeIcon icon={faTint} size="lg" />
+                  <FontAwesomeIcon icon={faTint} size="lg mb-2" />
                 </span>
                 <div className="info">
                   <h6 className="mb-0">
@@ -236,35 +239,35 @@ export default function Nystaihome() {
             </div>
 
             <div className="col-12 col-sm-6 col-lg-3 mb-3">
-              <div className="box d-flex align-items-start gap-3 w-100">
+              <div className="box text-center gap-3 w-100">
                 <span>
-                  <FontAwesomeIcon icon={faBroadcastTower} size="lg" />
+                  <FontAwesomeIcon icon={faBroadcastTower} size="lg mb-2" />
                 </span>
                 <div className="info">
                   <h6 className="mb-0">
-                    1000-meter range for flexible installation.
+                    10 Kilometer range for flexible installation with Access.
                   </h6>
                 </div>
               </div>
             </div>
 
             <div className="col-12 col-sm-6 col-lg-3 mb-3">
-              <div className="box d-flex align-items-start gap-3 w-100">
+              <div className="box text-center gap-3 w-100">
                 <span>
-                  <FontAwesomeIcon icon={faMobileAlt} size="lg" />
+                  <FontAwesomeIcon icon={faMobileAlt} size="lg mb-2" />
                 </span>
                 <div className="info">
                   <h6 className="mb-0">
-                    Mobile connectivity for remote access.
+                    Mobile and Desktop connectivity for remote access.
                   </h6>
                 </div>
               </div>
             </div>
 
             <div className="col-12 col-sm-6 col-lg-3 mb-3">
-              <div className="box d-flex align-items-start gap-3 w-100">
+              <div className="box text-center gap-3 w-100">
                 <span>
-                  <FontAwesomeIcon icon={faHome} size="lg" />
+                  <FontAwesomeIcon icon={faHome} size="lg mb-2" />
                 </span>
                 <div className="info">
                   <h6 className="mb-0">
