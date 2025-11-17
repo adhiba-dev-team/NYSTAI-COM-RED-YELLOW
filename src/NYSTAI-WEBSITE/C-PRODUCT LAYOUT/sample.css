@@ -206,7 +206,7 @@
     .product-detail p {
       font-size: 0.9rem;
       padding: 0.3rem;
-      color: #8c8c8c;
+      color: #3c3c3c;
       text-align: justify;
       max-width: 95%;
     }
@@ -214,7 +214,7 @@
     .product-detail ul {
       margin: 1rem 0;
       font-size: 0.9rem;
-      color: #8c8c8c;
+      color: #3c3c3c;
     }
 
     .product-detail ul li {

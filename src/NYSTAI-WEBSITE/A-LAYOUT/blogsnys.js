@@ -88,7 +88,7 @@ export default function Nystaiblogs() {
                       Non-visible light technologies in security:
                     </h5>
                     <p class="card-text">March 13, 2025</p>
-                    <p style={{ color: "#8c8c8c" }}>
+                    <p style={{ color: "#3c3c3c" }}>
                       Topic :{" "}
                       <span style={{ color: "#1b6763" }}>Nystai AI-IoT</span>
                     </p>
@@ -109,7 +109,7 @@ export default function Nystaiblogs() {
                       Exploring the ancient town of Dukezong:
                     </h5>
                     <p class="card-text">March 13, 2025</p>
-                    <p style={{ color: "#8c8c8c" }}>
+                    <p style={{ color: "#3c3c3c" }}>
                       Topic :{" "}
                       <span style={{ color: "#1b6763" }}>Nystai AI-IoT</span>
                     </p>
@@ -130,7 +130,7 @@ export default function Nystaiblogs() {
                       Top 5 trends for the AIoT industry in 2025:
                     </h5>
                     <p class="card-text">March 13, 2025</p>
-                    <p style={{ color: "#8c8c8c" }}>
+                    <p style={{ color: "#3c3c3c" }}>
                       Topic :{" "}
                       <span style={{ color: "#1b6763" }}>Nystai AI-IoT</span>
                     </p>
@@ -191,7 +191,7 @@ export default function Nystaiblogs() {
                           Renting vs Buying IT Equipment: Why Renting Makes
                           Business Sense
                         </h5>
-                        <p style={{ color: "#8c8c8c" }}>
+                        <p style={{ color: "#3c3c3c" }}>
                           Managing and maintaining IT equipment is a critical
                           challenge for businesses of all sizes. From laptops
                           and desktops to servers and projectors, purchasing IT
@@ -212,7 +212,7 @@ export default function Nystaiblogs() {
                           Rent a Laptop for Commercial Use: Boost Savings and
                           Productivity with Get It Rent
                         </h5>
-                        <p style={{ color: "#8c8c8c" }}>
+                        <p style={{ color: "#3c3c3c" }}>
                           modern business landscape, companies are constantly
                           seeking ways to remain competitive while managing
                           costs efficiently. Whether you’re a startup or a
@@ -256,7 +256,7 @@ export default function Nystaiblogs() {
                         <div class="card-body ">
                           <h5
                             class="card-title"
-                            style={{ fontSize: "1.20rem", color: "#8c8c8c" }}
+                            style={{ fontSize: "1.20rem", color: "#3c3c3c" }}
                           >
                             5 Tips to Keep in Mind Before Renting IT Equip:
                           </h5>
@@ -278,7 +278,7 @@ export default function Nystaiblogs() {
                         <div class="card-body ">
                           <h5
                             class="card-title"
-                            style={{ fontSize: "1.20rem", color: "#8c8c8c" }}
+                            style={{ fontSize: "1.20rem", color: "#3c3c3c" }}
                           >
                             Streamline Operations, Reduce Expenses:
                           </h5>

@@ -12,7 +12,7 @@ const bannerData = [
     desc: "SMART HOME From the everyday safety & security to the totally unforgettable, know what’s happening at home from wherever you are.",
   },
   {
-    src: "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/bannners jpng/Fire-alarm-Banner.webp",
+    src: "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/bannners jpng/Fire-alarm-Banner.png",
     title: "FIRE ALARM",
     desc: "No additional IT infrastructure is required, which results in reduced CAPEX & OPEX costs.",
   },
@@ -60,7 +60,7 @@ export default function Trial() {
   const timeAutoNext = 4000;
 
   useEffect(() => {
-    const autoNextSlide = () => nextBtnRef.current.click();
+    const autoNextSlide = () => showSlider("next");
 
     const resetAutoPlay = () => {
       clearTimeout(runNextAutoRef.current);
@@ -76,30 +76,31 @@ export default function Trial() {
       if (type === "next") {
         slider.appendChild(sliderItems[0]);
         if (thumbnailItems?.length) thumbnails.appendChild(thumbnailItems[0]);
-        // carouselRef.current.classList.add("next");
       } else {
         slider.prepend(sliderItems[sliderItems.length - 1]);
         if (thumbnailItems?.length)
           thumbnails.prepend(thumbnailItems[thumbnailItems.length - 1]);
-        // carouselRef.current.classList.add("prev");
       }
 
       clearTimeout(runTimeOutRef.current);
-      runTimeOutRef.current = setTimeout(() => {
-        // carouselRef.current.classList.remove("next");
-        // carouselRef.current.classList.remove("prev");
-      }, timeRunning);
+      runTimeOutRef.current = setTimeout(() => { }, timeRunning);
 
       resetAutoPlay();
     };
 
-    nextBtnRef.current.onclick = () => showSlider("next");
-    prevBtnRef.current.onclick = () => showSlider("prev");
+    // ✔ prevent error if arrows are removed
+    if (nextBtnRef.current) {
+      nextBtnRef.current.onclick = () => showSlider("next");
+    }
+    if (prevBtnRef.current) {
+      prevBtnRef.current.onclick = () => showSlider("prev");
+    }
 
     runNextAutoRef.current = setTimeout(autoNextSlide, timeAutoNext);
 
     return () => clearTimeout(runNextAutoRef.current);
   }, []);
+
 
   return (
     <>
@@ -128,14 +129,14 @@ export default function Trial() {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="navigation">
+        {/* <div className="navigation">
           <button ref={prevBtnRef} id="prev" className="nav-btn prev">
             <FontAwesomeIcon icon={faAngleLeft} />
           </button>
           <button ref={nextBtnRef} id="next" className="nav-btn next">
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
-        </div>
+        </div> */}
 
         {/* Thumbnail Section Placeholder (optional) */}
         <div className="thumbnail-nystai-slider-home1" ref={thumbnailRef}>

@@ -54,6 +54,8 @@ export default function Nystaihome() {
   const [modalShow, setModalShow] = useState(false);
 
   const images = getImages();
+
+
   return (
     <>
       <body className="body-nystai">
@@ -176,7 +178,7 @@ export default function Nystaihome() {
               <div
                 className=""
                 style={{
-                  color: "#8c8c8c",
+                  color: "#3c3c3c",
                   textAlign: "justify",
                   fontSize: "16px",
                 }}

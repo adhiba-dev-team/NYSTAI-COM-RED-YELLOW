@@ -16,9 +16,7 @@ export default function Warrenty() {
           {" "}
           <AsyncImage
             className="pri-logo"
-            src={
-              "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/nys-6683ef681f2c5.webp"
-            }
+            src="/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/nystai-main-logo.png"
             alt="privacy"
           />
         </div>

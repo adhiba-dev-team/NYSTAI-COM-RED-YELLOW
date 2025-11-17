@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(53, 51, 51);
+  color: #3c3c3c;
 }
 
 .slick-card-nys {
@@ -259,7 +259,7 @@
   }
 
   .head-h-divtopic {
-    font-size: 2.5rem;
+    font-size: 30px;
     /* ≈ 40px */
     font-weight: bold;
   }
@@ -478,7 +478,7 @@
   padding: 60px 20px;
   width: 100%;
   height: 325px;
-  margin-bottom: 70px;
+  margin: 70px 0;
   overflow: hidden;
 }
 
@@ -568,8 +568,8 @@
 }
 
 .card-text {
-  color: #8c8c8c;
-  font-size: 13px;
+  color: #3c3c3c;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -602,7 +602,7 @@
 }
 
 .center-title {
-  color: #D3D3D3;
+  color: #3c3c3c;
   font-size: 33px;
   font-style: normal;
   font-weight: 400;
@@ -771,6 +771,6 @@
   .card-text {
     font-size: clamp(12px, 1.8vw, 15px);
     font-weight: 300;
-    color: #8c8c8c;
+    color: #3c3c3c;
   }
 }

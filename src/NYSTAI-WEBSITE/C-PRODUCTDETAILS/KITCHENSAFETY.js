@@ -122,7 +122,7 @@ export default function Kitchendet() {
           <h6 className="head-h-divtopic">
             <span style={{ color: "#1b6763" }}>KITCHEN </span>SAFETY
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             Efficient valve control, enhanced safety, seamless integration,
             reliable operation.
           </h6>

@@ -127,7 +127,7 @@ export default function Ioedet() {
             <h6 className="head-h-divtopic">
               <span style={{ color: "#1b6763" }}>IOE </span>
             </h6>
-            <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+            <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
               Efficient data transfer, real-time communication, IoT integration,
               reliable performance.
             </h6>

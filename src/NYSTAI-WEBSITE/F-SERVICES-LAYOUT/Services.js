@@ -16,18 +16,18 @@ export default function Services() {
       <body className="services-body ">
         <section className="ser-header-sec">
           <div className="card text-white">
-            <AsyncImage
-              style={{ height: "60vh", objectFit: "cover", width: "100%" }}
+            <img
+              className="ser-banner"
               src={"/IMAGES-VIDEOS/E-IMG-SERVICES-LAYOUT/services-banner.webp"}
               alt="Card image"
             />
-            <div className="container card-img-overlay d-flex justify-content-end">
-              <div className="card-img-overlay-div">
+            <div className="container card-img-overlay d-flex justify-content-center">
+              <div className="card-img-overlay-div col-md-5 text-center">
                 <h2 className="">
-                  We Provide a wide range <br /> of services
+                  We Provide a wide range of services
                 </h2>
                 <p className="">
-                  including smart solutions, engineering, and manufacturing.
+                  Including smart solutions, engineering, and manufacturing.
                 </p>
                 <Link to="/nystai-support">
                   <button type="button" className="btn btn-secondary">

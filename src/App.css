@@ -22,7 +22,7 @@
 } */
 
 * {
-  font-family: sans-serif !important;
+  font-family: Arial !important;
 }
 
 .container {
@@ -58,8 +58,4 @@
   .whatsapp-float {
     display: none;
   }
-}
-
-.col-lg-6 {
-  /* padding: 0 !important; */
 }

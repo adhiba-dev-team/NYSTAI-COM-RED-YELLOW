@@ -115,7 +115,7 @@ export default function Smarthomesolu() {
         </div>
       </header>
 
-      <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu ">
+      {/* <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu ">
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle
@@ -124,7 +124,6 @@ export default function Smarthomesolu() {
             onClick={toggleDrawer(true)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* DESKTOP ROUTING */}
             <Nav className="sub-nav-desktop-nys m-auto">
               <Nav.Link>
                 <a
@@ -161,16 +160,15 @@ export default function Smarthomesolu() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
-      {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
             <a onClick={() => handleScrollToSection("Overview")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHome}
                   className="me-3"
                 />
@@ -180,7 +178,7 @@ export default function Smarthomesolu() {
             <a onClick={() => handleScrollToSection("What we offer")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
@@ -190,7 +188,7 @@ export default function Smarthomesolu() {
             <a onClick={() => handleScrollToSection("Features")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCircleInfo}
                   className="me-3"
                 />
@@ -200,7 +198,7 @@ export default function Smarthomesolu() {
             <a onClick={() => handleScrollToSection("Product display")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faWarehouse}
                   className="me-3"
                 />
@@ -212,7 +210,7 @@ export default function Smarthomesolu() {
       </Container>
 
       <section id="main-content" className="page-sections">
-        <section className="container page-section mt-5 mb-5" id="Overview">
+        <section class="container page-section mt-4 mt-lg-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
             <h3 className="heading-34">NYSTAI'S HOME AUTOMATION </h3>
             <p className="text-block-60">

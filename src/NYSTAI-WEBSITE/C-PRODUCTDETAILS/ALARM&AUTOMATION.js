@@ -46,7 +46,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faMicrochip}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#00aaff" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   TECHNOLOGIES
                 </div>
@@ -57,7 +57,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faPeopleArrows}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#ff6600" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   INTEGRATED SOLUTIONS
                 </div>
@@ -68,7 +68,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faCompass}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#28a745" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   PRODUCT
                 </div>
@@ -78,7 +78,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faShieldVirus}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#ff0000" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   PROTECT PLAN
                 </div>
@@ -89,7 +89,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faServer}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#6c757d" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   SERVICES
                 </div>
@@ -100,7 +100,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faHeadset}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#007bff" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   SUPPORT
                 </div>
@@ -111,7 +111,7 @@ export default function Alarmdet() {
                   <FontAwesomeIcon
                     icon={faBlog}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#6610f2" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   BLOGS
                 </div>
@@ -122,9 +122,9 @@ export default function Alarmdet() {
 
         <div className="common-top-div">
           <h6 className="head-h-divtopic">
-            <span style={{ color: "#1b6763" }}>ALARM & </span> AUTOMATION
+            <span style={{ color: "#FFB000" }}>ALARM & </span> AUTOMATION
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             Real-time monitoring, AI-powered automation, remote access, enhanced
             safety.
           </h6>
@@ -179,7 +179,7 @@ export default function Alarmdet() {
 
         <section className="mt-5 mb-5 container key-features-products-section-nys">
           <div className="key-features-products-nys">
-            <div className="mb-5">
+            <div className="mb-4">
               <h3 className="head-h-divtopic" style={{ textAlign: "center" }}>
                 KEY FEATURES
               </h3>
@@ -208,7 +208,7 @@ export default function Alarmdet() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row">
               <div className="col-lg-4">
                 <div class="card">
                   <div class="card-body">
@@ -231,7 +231,7 @@ export default function Alarmdet() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row">
               <center>
                 <div className="col-lg-4">
                   <div class="card">
@@ -265,7 +265,7 @@ export default function Alarmdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-2">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       Office
                     </h5>
                   </div>
@@ -286,7 +286,7 @@ export default function Alarmdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-3">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       Jewellery Shop
                     </h5>
                   </div>
@@ -307,7 +307,7 @@ export default function Alarmdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-2">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       Church
                     </h5>
                   </div>
@@ -328,7 +328,7 @@ export default function Alarmdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-2">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       House
                     </h5>
                   </div>

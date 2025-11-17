@@ -47,19 +47,19 @@
 
     .parallal-text-card-heading-nys h2 {
       font-weight: bolder;
-      color: #1b676379;
+      color: #FFB00079;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
     }
 
     .parallal-text-card-heading-nys span {
-      color: #1b6763;
+      color: #FFB000;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
     }
 
     .text-left-nys h6 {
-      color: #8c8c8c;
+      color: #3c3c3c;
       text-align: justify;
       margin-top: 2%;
     }
@@ -200,8 +200,7 @@
   }
 
   .four-cards-parallal-section-cards-nys {
-    .four-cards-parallal-main-cards {
-    }
+    .four-cards-parallal-main-cards {}
 
     .four-cards-parallal-main-cards .card {
       border: none;
@@ -211,8 +210,7 @@
       overflow: hidden;
     }
 
-    .four-cards-parallal-main-cards .card-body {
-    }
+    .four-cards-parallal-main-cards .card-body {}
 
     .four-cards-parallal-main-cards .card-title {
       font-size: 1.75rem;
@@ -223,12 +221,11 @@
 
     .four-cards-parallal-main-cards .card-text {
       font-size: 1rem;
-      color: #8c8c8c;
+      color: #3c3c3c;
       margin-bottom: 10px;
     }
 
-    .four-cards-parallal-main-cards .Parallal-img-nys {
-    }
+    .four-cards-parallal-main-cards .Parallal-img-nys {}
 
     .image-container {
       overflow: hidden;
@@ -247,31 +244,30 @@
 
   .key-features-products-section-nys {
     .key-features-products-nys {
-      margin: 75px 0;
+      margin: 50px 0;
     }
 
     .key-features-products-nys .card {
+      margin: 20px 0;
       outline: none;
       border: none;
       background-color: transparent;
-      padding: 30px 0;
+      padding: 20px 0;
       border-radius: 30px 0 30px 0;
-      box-shadow: 30px 30px 40px 0px #1b67633b;
+      outline: 1px solid #FFB000;
+      /* box-shadow: 30px 30px 40px 0px #1b67633b; */
       transition: 1s;
     }
 
-    .key-features-products-nys .card:hover {
-      transform: scale(1.2);
-      transition: 1s;
-      color: #1b6763;
-    }
-
-    .key-features-products-nys .card-body {
-      background-color: transparent;
+    @media screen and (max-width: 991px) {
+      .key-features-products-nys .card {
+        margin: 10px 0;
+      }
     }
 
     .key-features-products-nys .card-title {
       text-align: center;
+      font-size: 16px;
     }
   }
 }

@@ -40,7 +40,7 @@ export default function Support() {
             <div className="row g-0">
               <div className="col-lg-6 col-md-4 col-sm-4 col-6">
                 <div className="support-left-cont-nys-cards">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (1).png" style={{height:"50px", width:"50px"}} />
+                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (1).png" style={{ height: "50px", width: "50px" }} />
                   <div className="">
                     <h3>Email</h3>
                     <p>Our friendly team is here to help.</p>
@@ -50,7 +50,7 @@ export default function Support() {
               </div>
               <div className="col-lg-6 col-md-4 col-sm-4 col-6">
                 <div className="support-left-cont-nys-cards">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (2).png" style={{height:"50px", width:"50px"}} />
+                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (2).png" style={{ height: "50px", width: "50px" }} />
                   <div className="">
                     <h3>Phone</h3>
                     <p>Mon-Fri from 8am to 5pm.</p>
@@ -60,7 +60,7 @@ export default function Support() {
               </div>
               <div className="col-lg-6 col-md-4 col-sm-4 col-6">
                 <div className="support-left-cont-nys-cards">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (3).png" style={{height:"50px", width:"50px"}} />
+                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/Badge (3).png" style={{ height: "50px", width: "50px" }} />
                   <div className="">
                     <h3>Office</h3>
                     <p>Come say hello at our office HQ.</p>
@@ -81,121 +81,28 @@ export default function Support() {
 
           <div className="support-left-cont-nys">
             <div className="row g-0">
-              <div className="col-lg-4 col-md-4 col-sm-4 col-6">
-                <div className="support-left-cont-nys-cards d-flex align-items-center">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/wp-icon.png" />
-                  <div className="ms-3">
-                    <p>Whatsapp</p>
+              <div className="col-lg-4 col-md-6 col-sm-6 col-6">
+                <a href="https://wa.me/+918189977700" target="_blank" rel="noopener noreferrer" >
+                  <div className="support-left-cont-nys-cards d-flex align-items-center">
+                    <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/wp-icon.webp" style={{ height: "33px" }} />
+                    <div className="ms-3">
+                      <p>Whatsapp</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 col-6">
-                <div className="support-left-cont-nys-cards d-flex align-items-center">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/wp-icon.png" />
-                  <div className="ms-3">
-                    <p>BWhatsapp</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 col-6">
-                <div className="support-left-cont-nys-cards d-flex align-items-center">
-                  <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/wp-icon.png" />
-                  <div className="ms-3">
-                    <p>FAQ</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <div style={{ marginBottom: "50px" }}>
-            <div>
-              <h6
-                className="text-nav-topics-nystai pb-3"
-                style={{ fontSize: "30px" }}
-              >
-                GET IN TOUCH !
-              </h6>
-              <h1 style={{ marginTop: "30px" }}>
-                {" "}
-                <FontAwesomeIcon
-                  icon={faMobile}
-                  style={{ color: "#1d736f" }}
-                  className="me-1 "
-                />
-                +91 81899 77700
-              </h1>
-            </div>
-          </div>
-          <div className="col-12" style={{ marginBottom: "50px" }}>
-            <h6
-              className="text-nav-topics-nystai pb-3"
-              style={{ fontSize: "1.75rem" }}
-            >
-              CHAT WITH US
-            </h6>
-            <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center parallel-opp-img">
-                <a href="https://wa.me/+918189977700" target="_blank">
-                  <AsyncImage
-                    src={
-                      "/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/subtract-668405adc24fa.webp"
-                    }
-                    className="whats-icon-support-nystai"
-                    style={{
-                      height: "10vh",
-                      maxHeight: "80px",
-                      width: "auto",
-                      maxWidth: "100%",
-                      cursor: "pointer",
-                    }}
-                    onClick={openChatbot}
-                  />
                 </a>
               </div>
-
-              <div className="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center ">
-                <a href="https://wa.me/+918189977700" target="_blank">
-                  <AsyncImage
-                    src={
-                      "/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/pngwingcom-668405ac87a41.webp"
-                    }
-                    className="whats-icon-support-nystai"
-                    sstyle={{
-                      height: "10vh",
-                      maxHeight: "80px",
-                      width: "auto",
-                      maxWidth: "100%",
-                      cursor: "pointer",
-                    }}
-                    onClick={openChatbot}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div style={{ marginBottom: "50px" }}>
-            <div>
-              <a>
+              <div className="col-lg-8 col-md-6 col-sm-6 col-6">
                 <Link to="/faqs">
-                  <AsyncImage
-                    src={
-                      "/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/faq-668405a9687a6.webp"
-                    }
-                    className="whats-icon-support-nystai"
-                    style={{
-                      height: "10vh",
-                      maxHeight: "80px",
-                      width: "auto",
-                      maxWidth: "100%",
-                      cursor: "pointer",
-                    }}
-                    alt="nys-pro-image"
-                  />
+                  <div className="support-left-cont-nys-cards d-flex align-items-center">
+                    <img src="/IMAGES-VIDEOS/F-IMG-SUPPORT-LAYOUT/faq-icon.png" />
+                    <div className="ms-3">
+                      <p>FAQ</p>
+                    </div>
+                  </div>
                 </Link>
-              </a>
+              </div>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className=" col-lg-6 col-md-12">
           <div style={{ marginTop: "7vh" }}>

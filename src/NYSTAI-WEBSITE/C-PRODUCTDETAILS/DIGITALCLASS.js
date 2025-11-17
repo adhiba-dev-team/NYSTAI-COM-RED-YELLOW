@@ -122,7 +122,7 @@ export default function Digitaldet() {
           <h6 className="head-h-divtopic">
             <span style={{ color: "#1b6763" }}>DIGITAL </span>CLASS
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             High-definition touchscreen, wireless connectivity, digital
             whiteboarding, enhanced communication.
           </h6>

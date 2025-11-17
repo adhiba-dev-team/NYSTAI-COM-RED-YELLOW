@@ -388,7 +388,7 @@ const Login = () => {
                 <h5 style={{ fontSize: "30px", fontWeight: "bold", marginTop: "15px" }}>
                     {isLogin ? 'Welcome Back' : 'Welcome To Nystai'}
                 </h5>
-                <p style={{ color: "#8c8c8c", fontSize: "13px" }}>
+                <p style={{ color: "#3c3c3c", fontSize: "13px" }}>
                     {isLogin ? 'Please login your account' : 'Please create your account'}
                 </p>
             </div>
@@ -517,7 +517,7 @@ const Login = () => {
             <h5 style={{ fontSize: "30px", fontWeight: "bold", textAlign: "center", marginTop: "15px" }}>
                 Password Reset
             </h5>
-            <p style={{ color: "#8c8c8c", fontSize: "14px", marginBottom: "20px", textAlign: "center" }}>
+            <p style={{ color: "#3c3c3c", fontSize: "14px", marginBottom: "20px", textAlign: "center" }}>
                 Forgot Password
             </p>
 
@@ -587,7 +587,7 @@ const Login = () => {
                 Verify OTP
             </h5>
 
-            <p style={{ color: "#8c8c8c", fontSize: "14px", marginBottom: "20px", textAlign: "center" }}>
+            <p style={{ color: "#3c3c3c", fontSize: "14px", marginBottom: "20px", textAlign: "center" }}>
                 Enter the 6-digit OTP sent to {formData.email}
             </p>
 
@@ -679,7 +679,7 @@ const Login = () => {
 
                 {/* Resend OTP Section */}
                 <div className="text-center">
-                    <p style={{ color: "#8c8c8c", fontSize: "12px", marginBottom: "10px" }}>
+                    <p style={{ color: "#3c3c3c", fontSize: "12px", marginBottom: "10px" }}>
                         Didn't receive the OTP?
                     </p>
 
@@ -716,7 +716,7 @@ const Login = () => {
                         </button>
                     ) : (
                         <span style={{
-                            color: "#8c8c8c",
+                            color: "#3c3c3c",
                             fontSize: "12px",
                             fontWeight: "500"
                         }}>
@@ -738,7 +738,7 @@ const Login = () => {
                 Reset Password
             </h5>
 
-            <p style={{ color: "#8c8c8c", fontSize: "14px", marginBottom: "15px", textAlign: "center" }}>
+            <p style={{ color: "#3c3c3c", fontSize: "14px", marginBottom: "15px", textAlign: "center" }}>
                 Enter your new password
             </p>
 

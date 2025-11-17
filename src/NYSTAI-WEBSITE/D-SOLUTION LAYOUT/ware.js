@@ -123,7 +123,7 @@ export default function Warehouse() {
         </div>
       </header>
 
-      <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
+      {/* <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle
@@ -132,7 +132,7 @@ export default function Warehouse() {
             onClick={toggleDrawer(true)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* DESKTOP ROUTING */}
+     
             <Nav className="sub-nav-desktop-nys m-auto">
               <Nav.Link>
                 <a
@@ -169,15 +169,15 @@ export default function Warehouse() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
-      {/* MOBILE DRAWER */}
-      <Container className="sub-nav-mob-drawer-nys">
+      </Navbar> */}
+
+      {/* <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
             <a onClick={() => handleScrollToSection("Overview")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHome}
                   className="me-3"
                 />
@@ -187,7 +187,7 @@ export default function Warehouse() {
             <a onClick={() => handleScrollToSection("What we offer")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
@@ -197,7 +197,7 @@ export default function Warehouse() {
             <a onClick={() => handleScrollToSection("Features")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCircleInfo}
                   className="me-3"
                 />
@@ -207,7 +207,7 @@ export default function Warehouse() {
             <a onClick={() => handleScrollToSection("Product display")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faWarehouse}
                   className="me-3"
                 />
@@ -216,9 +216,9 @@ export default function Warehouse() {
             </a>
           </div>
         </Drawer>
-      </Container>
+      </Container> */}
       <section id="main-content" className="page-sections">
-        <section className="page-section mt-5 mb-5 container" id="Overview">
+        <section class="container page-section mt-4 mt-lg-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix mt-3">
             <h3 className="heading-34">NYSTAI'S WAREHOUSE SOLUTIONS</h3>
             <p className="text-block-60">
@@ -250,7 +250,7 @@ export default function Warehouse() {
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Enhances visibility and safety{" "}
+                    Safety Visibility{" "}
                   </h4>
                   <p className="card-text">
                     Ensures clear sightlines and awareness.{" "}
@@ -272,7 +272,7 @@ export default function Warehouse() {
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Prevents warehouse accidents efficiently{" "}
+                    Accident Prevention{" "}
                   </h4>
                   <p className="card-text">
                     Reduces risks with smart technology.{" "}
@@ -294,10 +294,10 @@ export default function Warehouse() {
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Quick communication with workers{" "}
+                    Instant Communication{" "}
                   </h4>
                   <p className="card-text">
-                    Keeps teams connected and informed.{" "}
+                    Keeps connected and informed.{" "}
                   </p>
                 </div>
               </div>
@@ -309,14 +309,14 @@ export default function Warehouse() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                       "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-4.png"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/warehouse-images/ware-four-card-4.png"
                     }
                     alt="Card image cap"
                   />
                 </center>
                 <div className="card-body">
                   <h4 className="card-title">
-                    Optimizes Workflow Effortlessly{" "}
+                    Workflow Optimization{" "}
                   </h4>
                   <p className="card-text">
                     Streamlines daily operations for faster.{" "}

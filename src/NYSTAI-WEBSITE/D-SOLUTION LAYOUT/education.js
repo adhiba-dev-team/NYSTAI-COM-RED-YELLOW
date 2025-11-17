@@ -111,7 +111,7 @@ export default function Education() {
         </div>
       </header>
 
-      <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
+      {/* <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle
@@ -120,7 +120,7 @@ export default function Education() {
             onClick={toggleDrawer(true)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* DESKTOP ROUTING */}
+      
             <Nav className="m-auto sub-nav-desktop-nys">
               <Nav.Link>
                 <a
@@ -165,16 +165,15 @@ export default function Education() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
-      {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
             <a onClick={() => handleScrollToSection("Overview")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHome}
                   className="me-3"
                 />
@@ -184,7 +183,7 @@ export default function Education() {
             <a onClick={() => handleScrollToSection("What we offer")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
@@ -194,7 +193,7 @@ export default function Education() {
             <a onClick={() => handleScrollToSection("Features")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCircleInfo}
                   className="me-3"
                 />
@@ -204,7 +203,7 @@ export default function Education() {
             <a onClick={() => handleScrollToSection("where we use")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faSchool}
                   className="me-3"
                 />
@@ -214,7 +213,7 @@ export default function Education() {
             <a onClick={() => handleScrollToSection("Product display")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faWarehouse}
                   className="me-3"
                 />
@@ -226,7 +225,7 @@ export default function Education() {
       </Container>
 
       <section id="main-content" className="page-sections">
-        <section className="container page-section mt-5 " id="Overview">
+         <section class="container page-section mt-4 mt-lg-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
             <h3 className="heading-34">
               Nystai's Interactive Flat-Panel Display (IFPD)
@@ -480,7 +479,7 @@ export default function Education() {
               <div class="right p-4">
                 <div>
                   <p className="section-title" style={{ color: "#EAA303" }}>01. Adaptable Platform</p>
-                  <div className="TIME-SOLU-EDU" style={{ color: "#8c8c8c" }} >
+                  <div className="TIME-SOLU-EDU" style={{ color: "#3c3c3c" }} >
                     <p>
                       NYSTAI's IFPD allows users to install their own devices
                       and displays, offering a customizable solution for various
@@ -491,7 +490,7 @@ export default function Education() {
 
                 <div>
                   <p className="section-title" style={{ color: "#EAA303" }}>02. Seamless Integration</p>
-                  <div className="TIME-SOLU-EDU" style={{ color: "#8c8c8c" }} >
+                  <div className="TIME-SOLU-EDU" style={{ color: "#3c3c3c" }} >
                     <p>
                       Provides a flexible foundation for both education and
                       industry, supporting dynamic learning and efficient
@@ -502,7 +501,7 @@ export default function Education() {
 
                 <div>
                   <p className="section-title" style={{ color: "#EAA303" }}>03. Ultra-Clear Display</p>
-                  <div className="TIME-SOLU-EDU" style={{ color: "#8c8c8c" }} >
+                  <div className="TIME-SOLU-EDU" style={{ color: "#3c3c3c" }} >
                     <p>
                       Enhances engagement and collaboration with a visually
                       stunning display
@@ -512,7 +511,7 @@ export default function Education() {
 
                 <div>
                   <p className="section-title" style={{ color: "#EAA303" }}>04. Real-Time Content Sharing</p>
-                  <div className="TIME-SOLU-EDU" style={{ color: "#8c8c8c" }} >
+                  <div className="TIME-SOLU-EDU" style={{ color: "#3c3c3c" }} >
                     <p>
                       Enables interactive communication with multi-touch
                       capabilities and device integration.
@@ -522,7 +521,7 @@ export default function Education() {
 
                 <div>
                   <p className="section-title" style={{ color: "#EAA303" }}>05. Versatile Use</p>
-                  <div className="TIME-SOLU-EDU" style={{ color: "#8c8c8c" }} >
+                  <div className="TIME-SOLU-EDU" style={{ color: "#3c3c3c" }} >
                     <p>
                       Suitable for classrooms, boardrooms, and beyond,
                       transforming spaces into dynamic, collaborative

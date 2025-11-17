@@ -48,90 +48,72 @@ export default function Aivmsdet() {
                   <FontAwesomeIcon
                     icon={faMicrochip}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#00aaff" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   TECHNOLOGIES
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   {" "}
                   <FontAwesomeIcon
                     icon={faPeopleArrows}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#ff6600" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   INTEGRATED SOLUTIONS
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCompass}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#28a745" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   PRODUCT
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   <FontAwesomeIcon
                     icon={faShieldVirus}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#ff0000" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   PROTECT PLAN
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   {" "}
                   <FontAwesomeIcon
                     icon={faServer}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#6c757d" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   SERVICES
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   {" "}
                   <FontAwesomeIcon
                     icon={faHeadset}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#007bff" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   SUPPORT
                 </div>
               </li>
-              {/* <div class="d-flex">
-                                              <div class="vr"></div>
-                                            </div> */}
               <li class="slider__slide">
                 <div class="slide__content">
                   {" "}
                   <FontAwesomeIcon
                     icon={faBlog}
                     className="me-3"
-                    style={{ fontSize: "3vh", color: "#6610f2" }}
+                    style={{ fontSize: "3vh", color: "#ffB000" }}
                   />
                   BLOGS
                 </div>
@@ -144,9 +126,9 @@ export default function Aivmsdet() {
         <section className="container four-cards-parallal-section-cards-nys ">
           <div className="common-top-div">
             <h6 className="head-h-divtopic">
-              <span style={{ color: "#1b6763" }}> AI-VMS </span>
+              <span style={{ color: "#FFB000" }}> AI-VMS </span>
             </h6>
-            <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+            <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
               Centralized monitoring, real-time video streaming, intelligent
               analysis, secure storage.
             </h6>
@@ -279,7 +261,7 @@ export default function Aivmsdet() {
 
         <section className="mt-5 mb-5 container key-features-products-section-nys">
           <div className="key-features-products-nys">
-            <div className="mb-5">
+            <div className="mb-4">
               <h3 className="head-h-divtopic" style={{ textAlign: "center" }}>
                 KEY FEATURES
               </h3>
@@ -308,7 +290,7 @@ export default function Aivmsdet() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row">
               <div className="col-lg-4">
                 <div class="card">
                   <div class="card-body">
@@ -331,7 +313,7 @@ export default function Aivmsdet() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row">
               <center>
                 <div className="col-lg-4">
                   <div class="card">
@@ -365,7 +347,7 @@ export default function Aivmsdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-2">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       Transport
                     </h5>
                   </div>
@@ -386,7 +368,7 @@ export default function Aivmsdet() {
                 </div>
                 <div className="row mt-3">
                   <div className="col-lg-3">
-                    <h5 className="" style={{ color: "#1b6763" }}>
+                    <h5 className="" style={{ color: "#ED1C24" }}>
                       Parking System
                     </h5>
                   </div>

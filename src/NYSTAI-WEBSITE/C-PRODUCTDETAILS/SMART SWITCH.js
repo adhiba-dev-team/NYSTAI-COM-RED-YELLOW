@@ -122,7 +122,7 @@ export default function Smartdet() {
           <h6 className="head-h-divtopic">
             <span style={{ color: "#1b6763" }}>SMART</span> SWITCH
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             Remote control, energy efficiency, scheduling, voice activation,
             modern convenience.
           </h6>

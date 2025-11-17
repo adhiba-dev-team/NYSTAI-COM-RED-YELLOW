@@ -26,7 +26,7 @@ export default function Footerproduct() {
   const toggleMultiPanel = (index) => {
     document
       .querySelectorAll(".multi-panel .panel")
-      // [index].classList.toggle("active");
+    // [index].classList.toggle("active");
   };
 
   const toggleSinglePanel = (index) => {
@@ -191,56 +191,6 @@ export default function Footerproduct() {
                 </li>
               </ul>
 
-              <ul class="box input-box">
-                <li class="link_name">Media</li>
-
-                <div className="d-flex" style={{ flexDirection: "column" }}>
-                  <li>
-                    <Link to="/SUPPORT">
-                      <input
-                        type="button"
-                        className="footer-subs"
-                        value="Subscribe Newsletter"
-                      />
-                    </Link>
-                  </li>
-
-                  <a
-                    class=" mb-2"
-                    href="https://play.google.com/store/apps/details?id=com.sdfornystalnew&pcampaignid=web_share"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <AsyncImage
-                      className="news-app-promo__play-store"
-                      src={
-                        "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/appstore-1 (1).svg"
-                      }
-                      width="161"
-                      height="auto"
-                      border="0"
-                      alt="nys-img"
-                    />
-                  </a>
-                  <a
-                    class=" mb-2"
-                    href="https://apps.apple.com/in/app/nystai/id6503040541"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <AsyncImage
-                      className="news-app-promo__app-store"
-                      src={
-                        "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/appstore-1 (2).svg"
-                      }
-                      width="161"
-                      height="auto"
-                      border="0"
-                      alt="nys-img"
-                    />
-                  </a>
-                </div>
-              </ul>
               <ul class="box p-0">
                 <li class="link_name">Media</li>
                 <div className="row">
@@ -327,6 +277,60 @@ export default function Footerproduct() {
                   </div>
                 </div>
               </ul>
+
+              <ul class="box input-box">
+                <li class="link_name">Apps</li>
+
+                <div className="d-flex" style={{ flexDirection: "column" }}>
+                  {/* <li>
+                    <Link to="/SUPPORT">
+                      <input
+                        type="button"
+                        className="footer-subs"
+                        value="Subscribe Newsletter"
+                      />
+                    </Link>
+                  </li> */}
+
+                  <a
+                    class="mt-2 mb-2"
+                    href="https://play.google.com/store/apps/details?id=com.sdfornystalnew&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="news-app-promo__play-store"
+                      src={
+                        "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/appstore-1 (1).svg"
+                      }
+                      style={{ height: "50px" }}
+                      width="161"
+                      height="auto"
+                      border="0"
+                      alt="nys-img"
+                    />
+                  </a>
+                  <a
+                    class=" mb-2"
+                    href="https://apps.apple.com/in/app/nystai/id6503040541"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="news-app-promo__app-store"
+                      src={
+                        "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/common/appstore-1 (2).svg"
+                      }
+                      style={{ height: "50px" }}
+                      width="161"
+                      height="auto"
+                      border="0"
+                      alt="nys-img"
+                    />
+                  </a>
+                </div>
+              </ul>
+
             </div>
           </div>
 
@@ -339,15 +343,15 @@ export default function Footerproduct() {
               <span class="policy_terms">
                 <a href="#">
                   {" "}
-                  <Link to="/nystai-privacy-policy">PRIVACY POLICY</Link> |
+                  <Link to="/nystai-privacy-policy">PRIVACY POLICY </Link> |
                 </a>
                 <a href="#">
                   {" "}
-                  <Link to="/nystai-warrenty">WARRANTY</Link>|
+                  <Link to="/nystai-warrenty"> WARRANTY </Link>|
                 </a>
                 <a href="#">
                   {" "}
-                  <Link to="/nystai-terms-condition">TERMS & SERVICE</Link>
+                  <Link to="/nystai-terms-condition"> TERMS & SERVICE</Link>
                 </a>
               </span>
             </div>

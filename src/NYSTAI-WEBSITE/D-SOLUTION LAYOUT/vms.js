@@ -123,7 +123,7 @@ export default function Vms() {
         </div>
       </header>
 
-      <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
+      {/* <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle
@@ -132,7 +132,7 @@ export default function Vms() {
             onClick={toggleDrawer(true)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* DESKTOP ROUTING */}
+      
             <Nav className="sub-nav-desktop-nys m-auto">
               <Nav.Link>
                 <a
@@ -169,15 +169,15 @@ export default function Vms() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
-      {/* MOBILE DRAWER */}
-      <Container className="sub-nav-mob-drawer-nys">
+      </Navbar> */}
+
+      {/* <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
             <a onClick={() => handleScrollToSection("Overview")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHome}
                   className="me-3"
                 />
@@ -187,7 +187,7 @@ export default function Vms() {
             <a onClick={() => handleScrollToSection("What we offer")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
@@ -197,7 +197,7 @@ export default function Vms() {
             <a onClick={() => handleScrollToSection("Features")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCircleInfo}
                   className="me-3"
                 />
@@ -207,7 +207,7 @@ export default function Vms() {
             <a onClick={() => handleScrollToSection("Product display")}>
               <p style={{ color: "#ffB000", cursor: "pointer" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faWarehouse}
                   className="me-3"
                 />
@@ -216,9 +216,9 @@ export default function Vms() {
             </a>
           </div>
         </Drawer>
-      </Container>
+      </Container> */}
       <section id="main-content" className="page-sections">
-        <section className="container page-section mt-5 mb-5" id="Overview">
+        <section class="container page-section mt-4 mt-lg-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
             <h3 className="heading-34">NYSTAI'S AI VMS</h3>
             <p className="text-block-60">
@@ -263,7 +263,7 @@ export default function Vms() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                       "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/AI-VMS/aivms-four-card-2.png"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/AI-VMS/aivms-four-card-2.png"
                     }
                     alt="Card image cap"
                   />
@@ -304,7 +304,7 @@ export default function Vms() {
                   <AsyncImage
                     className="card-img-top"
                     src={
-                       "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/AI-VMS/aivms-four-card-4.png"
+                      "/IMAGES-VIDEOS/C-IMG-SOLUTION-LAYOUT/AI-VMS/aivms-four-card-4.png"
                     }
                     alt="Card image cap"
                   />
@@ -312,7 +312,7 @@ export default function Vms() {
                 <div className="card-body">
                   <h4 className="card-title">Intelligence</h4>
                   <p className="card-text">
-                    Smart analytics deliver real-time insights for better decision-making
+                    Smart analytics deliver real-time insights for decision-making
                   </p>
                 </div>
               </div>
@@ -354,7 +354,7 @@ export default function Vms() {
                     >
                       Challenges Without VMS:
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       Without advanced vehicle management systems, businesses
                       struggle with poor visibility into driver behavior,
                       increased risks of accidents, and inefficient fleet
@@ -382,7 +382,7 @@ export default function Vms() {
                     >
                       Solutions Provided by VMS:
                     </h5>
-                    <p className="card-text" style={{ color: "#8c8c8c" }}>
+                    <p className="card-text" style={{ color: "#3c3c3c" }}>
                       Vehicle management systems like our dashboard cameras, AI
                       MDVR, and 360-degree monitors provide comprehensive
                       surveillance and driver analysis. Real-time alerts, video
@@ -431,7 +431,7 @@ export default function Vms() {
                     >
                       How Nystai Products Resolve These Issues:
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       Nystai's VMS integrates dashboard cameras, AI MDVR, and
                       360-degree monitors into a unified platform, providing
                       real-time monitoring and AI-based analysis. Businesses

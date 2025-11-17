@@ -144,7 +144,7 @@ export default function Industrialdet() {
             Industrial
             <span style={{ color: "#1b6763" }}> AI NVR</span>
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             Edge computing, real-time analytics, cybersecurity, remote access,
             smart automation
           </h6>

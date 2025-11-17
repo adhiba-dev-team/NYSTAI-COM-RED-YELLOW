@@ -70,7 +70,7 @@ export default function Slickcard() {
           <span style={{ color: "#ffB000" }}>NYST</span>AI-IoT SOLUTIONS
         </h6>
 
-        <h6 className="sechead-h-divtop " style={{ color: "#8c8c8c" }}>
+        <h6 className="sechead-h-divtop " style={{ color: "#3c3c3c" }}>
           Maiden Unified All-in-One Video, Alarm & Access Control Platform
         </h6>
       </div>
@@ -130,7 +130,7 @@ export default function Slickcard() {
                 <div className="rt-profile-card">
                   <AsyncImage
                     src={
-                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/Fire alarm.webp"
+                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/Firealarm.jpg"
                     }
                     className="full-width img-fluid"
                     alt="Cardhover3"
@@ -151,7 +151,7 @@ export default function Slickcard() {
                 <div className="rt-profile-card">
                   <AsyncImage
                     src={
-                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/kitchen safety.webp"
+                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/kitchen safety.jpg"
                     }
                     className="full-width img-fluid"
                     alt="Cardhover4"
@@ -175,7 +175,7 @@ export default function Slickcard() {
                 <div className="rt-profile-card">
                   <AsyncImage
                     src={
-                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/Lighting.webp"
+                      "/IMAGES-VIDEOS/A-IMG-HOME-LAYOUT/images for .com/Lighting.jpg"
                     }
                     className="full-width img-fluid"
                     alt="Cardhover5"

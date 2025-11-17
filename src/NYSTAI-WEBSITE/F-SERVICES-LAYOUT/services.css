@@ -51,6 +51,23 @@
   font-size: 1rem;
 }
 
+@media (min-width: 901px) {
+  .ser-header-sec .ser-banner {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .ser-header-sec .ser-banner {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
 .ser-types-sec {
   overflow: hidden;
 

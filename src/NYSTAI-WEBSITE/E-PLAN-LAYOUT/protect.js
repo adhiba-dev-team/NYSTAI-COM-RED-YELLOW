@@ -41,28 +41,23 @@ export default function Protectplan() {
       <body className="protectplan">
         <section className="ser-header-sec">
           <div className="card text-white">
-            <AsyncImage
-              className="card-img img-fluid"
+            <img
+              className="card-img-prot-ban img-fluid"
               alt="Card image"
               src={servicesbanner}
               Transition={Blur}
-              loader={
-                <div
-                  style={{ height: "60vh", width: "100%", background: "#888" }}
-                />
-              }
-              style={{ height: "60vh", objectFit: "cover", width: "100%" }}
+              // style={{ height: "60vh", objectFit: "cover", width: "100%" }}
             />
             <div className="card-img-overlay container d-flex align-items-center justify-content-start">
               <div
-                className="card-img-overlay-div p-3 p-md-5"
+                className="card-img-overlay-div p-4 p-md-5 col-md-6"
                 style={{
                   backgroundColor: "#00000080",
                   borderRadius: "10px",
                 }}
               >
                 <h2 className="card-title fs-4 fs-md-2">
-                  Additional services that provide <br /> reliable support when
+                  Additional services that provide  reliable support when
                   you need it most.
                 </h2>
                 <p>
@@ -207,7 +202,7 @@ export default function Protectplan() {
                 style={{
                   textTransform: "uppercase",
                   fontSize: "38px",
-                  color: "#8c8c8c",
+                  color: "#3c3c3c",
                   fontWeight: "bolder",
                 }}
               >

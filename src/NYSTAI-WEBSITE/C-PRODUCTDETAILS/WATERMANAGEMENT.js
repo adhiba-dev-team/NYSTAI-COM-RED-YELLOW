@@ -122,7 +122,7 @@ export default function Waterdet() {
           <h6 className="head-h-divtopic">
             <span style={{ color: "#1b6763" }}>MANAGEMENT</span>
           </h6>
-          <h6 className="sechead-h-divtop" style={{ color: "#8c8c8c" }}>
+          <h6 className="sechead-h-divtop" style={{ color: "#3c3c3c" }}>
             Real-time monitoring, leak detection, automated alerts, efficient
             water management.
           </h6>

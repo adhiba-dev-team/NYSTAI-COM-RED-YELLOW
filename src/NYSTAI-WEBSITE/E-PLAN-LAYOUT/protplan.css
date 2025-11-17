@@ -11,7 +11,7 @@
   .Protect-plan-page-text-nys p {
     font-size: 14px;
     text-align: justify;
-    color: #8c8c8c;
+    color: #3c3c3c;
   }
 }
 
@@ -24,7 +24,7 @@
   .Protect-plan-page-text-nys p {
     font-size: 15px;
     text-align: center;
-    color: #8c8c8c;
+    color: #3c3c3c;
   }
 
   .Protect-plan-page-text-nys {
@@ -117,7 +117,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #f9f9f9ea;  /* adjust darkness here */
+  background: #f9f9f9ea;
+  /* adjust darkness here */
   z-index: 0;
 }
 
@@ -128,18 +129,21 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  z-index: 1; /* ensure text on top of overlay */
+  z-index: 1;
+  /* ensure text on top of overlay */
 }
 
 .build-ur-systems-nys h2 {
   font-size: clamp(28px, 3vw, 44px);
   font-weight: 500;
-  color: #212529; /* text white on bg */
+  color: #212529;
+  /* text white on bg */
 }
 
 .build-ur-systems-nys p {
   font-size: clamp(14px, 1.5vw, 18px);
-  color: #808080; /* soft white */
+  color: #808080;
+  /* soft white */
 }
 
 .build-ur-systems-nys button {
@@ -351,7 +355,7 @@
   .services-types-head {}
 
   .services-types-head p {
-    color: #8c8c8c;
+    color: #3c3c3c;
   }
 
   .services-types-head h2 {
@@ -369,7 +373,7 @@
   }
 
   .service-our-serv-card .card-text {
-    color: #8c8c8c;
+    color: #3c3c3c;
     text-align: justify;
     font-size: clamp(14px, 1.2vw, 16px);
   }
@@ -382,10 +386,27 @@
   }
 
   .card-text {
-    color: #8c8c8c;
+    color: #3c3c3c;
     text-align: justify;
     font-size: 16px;
   }
+
+  @media (min-width: 901px) {
+    .card-img-prot-ban {
+      height: 70vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .card-img-prot-ban {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
 }
 
 /* For mobile (max-width: 600px) */

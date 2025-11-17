@@ -129,11 +129,11 @@
   text-transform: uppercase;
   font-weight: bolder;
   color: #FFB000;
-  font-size: clamp(18px, 4vw, 20px);
+  font-size: clamp(18px, 4vw, 18px);
 }
 
 .card-text {
-  color: #8c8c8c;
+  color: #3c3c3c;
   font-size: clamp(14px, 4vw, 16px);
 }
 
@@ -154,7 +154,7 @@
   }
 
   .mini-block-statement p {
-    color: #8c8c8c;
+    color: #3c3c3c;
     font-size: 15px;
     margin-bottom: 17px;
   }
@@ -187,7 +187,7 @@
 
   .mini-block-statement p {
     float: right;
-    color: #8c8c8c;
+    color: #3c3c3c;
     padding-top: 2vw;
     padding-bottom: 0;
     position: relative;
@@ -1103,7 +1103,7 @@ input[id="radio-3"] {
 
   .tab-contents-nys p {
     font-size: 15px;
-    color: #757575;
+    color: #3c3c3c;
     text-wrap: pretty;
   }
 }
@@ -1122,7 +1122,7 @@ input[id="radio-3"] {
 
   .tab-contents-nys p {
     font-size: 16px;
-    color: #757575;
+    color: #3c3c3c;
     text-wrap: pretty;
   }
 }
@@ -1164,7 +1164,7 @@ input[id="radio-3"] {
 
       .card {
         background-color: #D9D9D9;
-        padding: 20px 1px;
+        padding: 30px 1px;
         border: none;
         border-radius: 0%;
         height: fit-content;
@@ -1187,7 +1187,7 @@ input[id="radio-3"] {
 
       .card {
         background-color: #D9D9D9;
-        padding: 20px 1px;
+        padding: 30px 1px;
         border: none;
         border-radius: 0%;
         height: fit-content;
@@ -1221,7 +1221,7 @@ input[id="radio-3"] {
         background-color: #D9D9D9;
         padding: 50px 1px;
         border: none;
-        border-radius: 0%;
+        border-radius: 10px;
         height: 300px;
         display: flex;
         justify-content: center;
@@ -1249,7 +1249,7 @@ input[id="radio-3"] {
         background-color: #D9D9D9;
         padding: 50px 1px;
         border: none;
-        border-radius: 0%;
+        border-radius: 10px;
         height: 300px;
         display: flex;
         justify-content: center;
@@ -1289,7 +1289,7 @@ input[id="radio-3"] {
     }
 
     p {
-      color: #8c8c8c;
+      color: #3c3c3c;
     }
 
 
@@ -1612,7 +1612,7 @@ input[id="radio-3"] {
 }
 
 .three-overlay-cards-nys .card-text {
-  color: #8c8c8c;
+  color: #3c3c3c;
   font-size: 17px;
 }
 
@@ -1846,7 +1846,7 @@ input[id="radio-3"] {
     p {
       padding-top: 8px;
       text-align: justify;
-      color: #8c8c8c;
+      color: #3c3c3c;
       font-size: 17px;
     }
   }
@@ -2042,3 +2042,4 @@ input[id="radio-3"] {
     }
   }
 }
+

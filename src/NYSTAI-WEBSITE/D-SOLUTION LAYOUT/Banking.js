@@ -132,7 +132,7 @@ export default function Banking() {
         </div>
       </header>
 
-      <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
+      {/* <Navbar collapseOnSelect expand="lg" className="sub-nav-edu-solu">
         <Container>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle
@@ -141,7 +141,6 @@ export default function Banking() {
             onClick={toggleDrawer(true)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* DESKTOP ROUTING */}
             <Nav className="sub-nav-desktop-nys m-auto">
               <Nav.Link>
                 <a
@@ -179,7 +178,6 @@ export default function Banking() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* MOBILE DRAWER */}
       <Container className="sub-nav-mob-drawer-nys">
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <div
@@ -191,14 +189,14 @@ export default function Banking() {
             }}
           >
             <h4 style={{ color: "#FFB000", fontWeight: "bold" }}>
-              <span style={{ color: "#8c8c8c" }}>INTEGRATED</span> SOLUTIONS
+              <span style={{ color: "#3c3c3c" }}>INTEGRATED</span> SOLUTIONS
             </h4>
           </div>
           <div className="mt-3" style={{ paddingLeft: "7px" }}>
             <Link to="/nystai-solution-home">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHouseSignal}
                   className="me-3"
                 />
@@ -208,7 +206,7 @@ export default function Banking() {
             <Link to="/nystai-solution-Industrial">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faIndustry}
                   className="me-3"
                 />
@@ -218,7 +216,7 @@ export default function Banking() {
             <Link to="/nystai-solution-education">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faSchool}
                   className="me-3"
                 />
@@ -228,7 +226,7 @@ export default function Banking() {
             <Link to="/nystai-solution-worship">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faPlaceOfWorship}
                   className="me-3"
                 />
@@ -238,7 +236,7 @@ export default function Banking() {
             <Link to="/nystai-solution-vms">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCarBurst}
                   className="me-3"
                 />
@@ -248,7 +246,7 @@ export default function Banking() {
             <Link to="/nystai-solution-Warehouse">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faWarehouse}
                   className="me-3"
                 />
@@ -258,7 +256,7 @@ export default function Banking() {
             <Link to="/nystai-solution-Hospital">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faIndustry}
                   className="me-3"
                 />
@@ -268,7 +266,7 @@ export default function Banking() {
             <Link to="/nystai-solution-banking">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faBuildingColumns}
                   className="me-3"
                 />
@@ -278,7 +276,7 @@ export default function Banking() {
             <Link to="/nystai-solution-retail">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faCircleInfo}
                   className="me-3"
                 />
@@ -288,7 +286,7 @@ export default function Banking() {
             <Link to="/nystai-solution-parking">
               <p style={{ color: "#FFB000" }}>
                 <FontAwesomeIcon
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#3c3c3c" }}
                   icon={faHandshake}
                   className="me-3"
                 />
@@ -297,12 +295,10 @@ export default function Banking() {
             </Link>
           </div>
         </Drawer>
-      </Container>
+      </Container> */}
+
       <section id="main-content" className="page-sections">
-        <section
-          className="container page-section container mt-5 mb-5"
-          id="Overview"
-        >
+        <section class="container page-section mt-4 mt-lg-5 mb-5" id="Overview">
           <div className="mini-block-statement w-clearfix">
             <h3 className="heading-34">NYSTAI’S BANKING SOLUTION </h3>
             <p className="text-block-60">
@@ -390,7 +386,7 @@ export default function Banking() {
                   />
                 </center>
                 <div className="card-body">
-                  <h4 className="card-title">Digital Transformation</h4>
+                  <h4 className="card-title">Digital Transform</h4>
                   <p className="card-text">
                     Customizable for Any Environment
                   </p>
@@ -457,7 +453,7 @@ export default function Banking() {
 
             <div
               className="row"
-            style={{display:"flex", justifyContent:"center"}}
+              style={{ display: "flex", justifyContent: "center" }}
             >
               <div class="col-lg-4 col-md-6 col-sm-6 mt-3">
                 <div class="card">
@@ -480,7 +476,7 @@ export default function Banking() {
                     >
                       Advanced Surveillance
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       Ensure 24/7 security with smart cameras, access control,
                       and real-time alerts.
                     </p>
@@ -508,7 +504,7 @@ export default function Banking() {
                     >
                       Digital Document Management
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       Simplify customer onboarding and regulatory compliance
                       with automated verification systems.
                     </p>
@@ -536,7 +532,7 @@ export default function Banking() {
                     >
                       Energy-Efficient Solutions
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       {" "}
                       Reduce costs with smart lighting and climate control
                       tailored for banking environments.
@@ -565,7 +561,7 @@ export default function Banking() {
                     >
                       Automated Teller Monitoring
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       {" "}
                       Monitor ATM performance, security, and cash flow with
                       advanced remote management tools.
@@ -594,7 +590,7 @@ export default function Banking() {
                     >
                       Centralized Operations
                     </h5>
-                    <p class="card-text" style={{ color: "#8c8c8c" }}>
+                    <p class="card-text" style={{ color: "#3c3c3c" }}>
                       {" "}
                       Manage branch activities, employee schedules, customer
                       interactions with unified digital platform.

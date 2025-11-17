@@ -9,8 +9,8 @@ export default function Faqs() {
 
   return (
     <>
-      <div className="text-center mt-5">
-        <h3>Frequently Asked Questions</h3>
+      <div className="text-center mt-4">
+        <h3 style={{ color: "#ffb000", textTransform: "uppercase" }}>Frequently Asked Questions</h3>
       </div>
 
       <div
@@ -284,6 +284,11 @@ export default function Faqs() {
           </div>
         </div>
       </div>
+
+      <div>
+        <Footerproduct />
+      </div>
+
     </>
   );
 }
